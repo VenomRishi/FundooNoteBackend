@@ -1,0 +1,5 @@
+http://localhost:8080/user/login - login 
+http://localhost:8080/user/register - register
+http://localhost:8080/user/verify/{token} - register verification link
+http://localhost:8080/user/forgetpassword - forgotPassword
+http://localhost:8080/user/setpassword/{token} - setPassword
