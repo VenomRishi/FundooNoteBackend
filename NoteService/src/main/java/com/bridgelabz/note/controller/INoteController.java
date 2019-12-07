@@ -325,6 +325,17 @@ public interface INoteController {
 	ResponseEntity<Response> getAllUsers();
 
 	/**
+	 * Purpose: this method is implemented to give proper response even if the Rest
+	 * Template will unable to get response from user service this is fault tolerant
+	 * method for getAllUsers() where in this method it uses RestTemplate to get
+	 * users from user service project
+	 * 
+	 * @return this will returns ResponseEntity<Response> which will show a proper
+	 *         message on the client application
+	 */
+	ResponseEntity<Response> fallback();
+
+	/**
 	 * Purpose: this method is used to find the notes by some sort of filters like
 	 * pinned notes, archived notes, trashed notes will search by this filter and
 	 * return the filtered record back to the request comes from the front end

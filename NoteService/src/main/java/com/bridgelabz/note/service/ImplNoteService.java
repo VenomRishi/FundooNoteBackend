@@ -61,7 +61,7 @@ public class ImplNoteService implements INoteService {
 
 	@Autowired
 	private NoteUtility utility;
-	
+
 	@Autowired
 	private ElasticSearchService eSService;
 
@@ -78,7 +78,7 @@ public class ImplNoteService implements INoteService {
 //		if (findUserById(userId) == null)
 //			throw new NoteException(Constant.USER_ID_NOT_FOUND);
 		note.setUserId(userId);
-		note= noteRepository.save(note);
+		note = noteRepository.save(note);
 		try {
 			eSService.addNote(note);
 		} catch (IOException e) {
@@ -123,9 +123,12 @@ public class ImplNoteService implements INoteService {
 		LOG.info(Constant.SERVICE_GET_BY_FILTER);
 		int key = Integer.parseInt(TokenUtility.parseToken(userId).getSubject());
 
-		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_DETAIL, noteRepository.findAll().stream().filter(
-				i -> i.getUserId() == key && i.isPin() == pin && i.isArchive() == archive && i.isTrash() == trash)
-				.sorted(Comparator.comparing(Note::getCreatedDate).reversed()).parallel().collect(Collectors.toList()));
+		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_DETAIL,
+				noteRepository.findAll().stream()
+						.filter(i -> i.getUserId() == key && i.isPin() == pin && i.isArchive() == archive
+								&& i.isTrash() == trash)
+						.sorted(Comparator.comparing(Note::getCreatedDate).reversed()).parallel()
+						.collect(Collectors.toList()));
 	}
 
 	@Override
@@ -149,7 +152,7 @@ public class ImplNoteService implements INoteService {
 		// labelsNote.addAll(labelsNoteAfterRemove);
 
 		note.getLabels().addAll(labelsNote);
-		note=noteRepository.save(note);
+		note = noteRepository.save(note);
 		try {
 			eSService.updateNote(note);
 		} catch (IOException e) {
@@ -175,7 +178,6 @@ public class ImplNoteService implements INoteService {
 		try {
 			eSService.deleteNoteDocument(note.getNoteId().toString());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_DELETE, true);
@@ -274,7 +276,7 @@ public class ImplNoteService implements INoteService {
 		note.getLabels().addAll(labelsNote);
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_ADD_LABEL_TO_NOTE, noteRepository.save(note));
 	}
-	
+
 	@Override
 	public Response updateLabelToNote(String userIdToken, LabelToNoteDTO labelToNoteDTO) {
 		LOG.info(Constant.SERVICE_UPDATE_LABEL_TO_NOTE);
@@ -283,11 +285,10 @@ public class ImplNoteService implements INoteService {
 		if (note == null) {
 			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
 		}
-		
+
 		note.setLabels(labelToNoteDTO.getLabels());
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_ADD_LABEL_TO_NOTE, noteRepository.save(note));
 	}
-
 
 	@Override
 	public Response removeLabelFromNote(String userIdToken, LabelToNoteDTO labelToNoteDTO) {
@@ -446,16 +447,20 @@ public class ImplNoteService implements INoteService {
 	}
 
 	@Override
+	public Response fallback() {
+		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_HYSTIX_FALLBACK_RESPONSE, null);
+	}
+
+	@Override
 	public Response findNoteByTitleOrDescription(String userId, String key) {
-		if(noteRepository.findById(Integer.parseInt(TokenUtility.parseToken(userId).getSubject())).isPresent()) {
+		if (noteRepository.findById(Integer.parseInt(TokenUtility.parseToken(userId).getSubject())).isPresent()) {
 			throw new NoteException(Constant.USER_ID_NOT_FOUND);
 		}
 		try {
-			return new Response(Constant.HTTP_STATUS_OK,Constant.ESRESPONSE,eSService.searchByNoteTitle(key));
+			return new Response(Constant.HTTP_STATUS_OK, Constant.ESRESPONSE, eSService.searchByNoteTitle(key));
 		} catch (IOException e) {
 			throw new NoteException(e.toString());
 		}
 	}
 
-	
 }

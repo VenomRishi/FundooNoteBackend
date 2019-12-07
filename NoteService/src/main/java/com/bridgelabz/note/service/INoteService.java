@@ -118,7 +118,7 @@ public interface INoteService {
 	 * @param userIdToken this is token by which we can specify which user has the
 	 *                    note related with
 	 * 
-	 * @param noteId this parameter coming from the front end application id
+	 * @param noteId      this parameter coming from the front end application id
 	 *                    specify the note id which will helps service to specify
 	 *                    which note has to pin and by using this id method will pin
 	 *                    note in the database
@@ -134,7 +134,7 @@ public interface INoteService {
 	 * @param userIdToken this is token by which we can specify which user has the
 	 *                    note related with
 	 * 
-	 * @param noteId this parameter coming from the front end application id
+	 * @param noteId      this parameter coming from the front end application id
 	 *                    specify the note id which will helps service to specify
 	 *                    which note has to archive and by using this id method will
 	 *                    archive note in the database
@@ -151,7 +151,7 @@ public interface INoteService {
 	 * 
 	 * @param userIdToken this is token by which we can specify which user has the
 	 *                    note related with
-	 * @param noteId this is token by which we can specify which note should be
+	 * @param noteId      this is token by which we can specify which note should be
 	 *                    updated
 	 * @return this method returns a proper response message with true value which
 	 *         will pass to client side
@@ -189,8 +189,8 @@ public interface INoteService {
 	Response addLabelToNote(String userIdToken, LabelToNoteDTO labelToNoteDTO);
 
 	/**
-	 * Purpose: this method is used to update labels to existing note which is there in
-	 * the database
+	 * Purpose: this method is used to update labels to existing note which is there
+	 * in the database
 	 * 
 	 * @param userIdToken    this is token by which we can specify which user has
 	 *                       the note related with
@@ -201,7 +201,7 @@ public interface INoteService {
 	 *         will pass to client side
 	 */
 	Response updateLabelToNote(String userIdToken, LabelToNoteDTO labelToNoteDTO);
-	
+
 	/**
 	 * Purpose: this method is used to remove labels from the existing note which is
 	 * there in the database
@@ -337,6 +337,16 @@ public interface INoteService {
 	Response getAllUsers();
 
 	/**
+	 * Purpose: this method is implemented to give proper response even if the Rest
+	 * Template will unable to get response from user service this is fault tolerant
+	 * method for getAllUsers() where in this method it uses RestTemplate to get
+	 * users from user service project
+	 * 
+	 * @return returns proper failure message with response
+	 */
+	Response fallback();
+
+	/**
 	 * Purpose: this method is used to get all notes by using some sort of filters,
 	 * filters can be applied by the use of pinned notes, archived notes and trashed
 	 * notes
@@ -360,7 +370,5 @@ public interface INoteService {
 	 * @return returns the proper response of notes object back to user
 	 */
 	Response findNoteByTitleOrDescription(String userId, String key);
-
-	
 
 }

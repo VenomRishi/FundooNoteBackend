@@ -96,6 +96,7 @@ public class Constant {
 	public final static String NOTE_REMOVE_LABEL_TO_NOTE = "Note label remove successfully";
 	public final static String NOTE_UPDATE_NOTE_COLOR = "Note color updated successfully";
 	public final static String NOTE_USER_LIST = "Note User list";
+	public final static String NOTE_HYSTIX_FALLBACK_RESPONSE = "Hystix response of failure of getAllUsers method";
 
 	// label related
 	public final static String LABEL_SAVE = "Label stored successfully";

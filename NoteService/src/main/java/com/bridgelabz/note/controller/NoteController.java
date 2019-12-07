@@ -36,6 +36,7 @@ import com.bridgelabz.note.dto.NoteChangesDTO;
 import com.bridgelabz.note.response.Response;
 import com.bridgelabz.note.service.INoteService;
 import com.bridgelabz.note.utility.Constant;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
 @RequestMapping("/user/note")
@@ -211,11 +212,16 @@ public class NoteController implements INoteController {
 				HttpStatus.OK);
 	}
 
+	@HystrixCommand(fallbackMethod = "fallback")
 	@Override
 	@GetMapping("/getallusers")
 	public ResponseEntity<Response> getAllUsers() {
 		LOG.info(Constant.CONTROLLER_GET_ALL_USERS);
 		return new ResponseEntity<Response>(service.getAllUsers(), HttpStatus.OK);
+	}
+	
+	public ResponseEntity<Response> fallback(){
+		return new ResponseEntity<Response>(service.fallback(),HttpStatus.OK);
 	}
 
 	@Override
