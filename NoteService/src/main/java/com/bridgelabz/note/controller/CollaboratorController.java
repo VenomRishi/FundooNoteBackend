@@ -29,7 +29,7 @@ import com.bridgelabz.note.service.ICollaboratorService;
 import com.bridgelabz.note.utility.Constant;
 
 @RestController
-@RequestMapping("/user/collab")
+@RequestMapping("/collab")
 @CrossOrigin
 public class CollaboratorController implements ICollaboratorController {
 

@@ -41,7 +41,7 @@ import com.bridgelabz.fundoo.user.utility.Constant;
 import com.bridgelabz.fundoo.user.utility.TokenUtility;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping
 @CrossOrigin
 public class UserController {
 

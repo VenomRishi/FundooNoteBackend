@@ -39,7 +39,7 @@ import com.bridgelabz.note.utility.Constant;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
-@RequestMapping("/user/note")
+@RequestMapping
 @CrossOrigin
 public class NoteController implements INoteController {
 

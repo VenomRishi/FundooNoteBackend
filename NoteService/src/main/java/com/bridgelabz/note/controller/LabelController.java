@@ -35,7 +35,7 @@ import com.bridgelabz.note.response.Response;
 import com.bridgelabz.note.service.ILabelService;
 
 @RestController
-@RequestMapping("/user/label")
+@RequestMapping("/label")
 @CrossOrigin
 public class LabelController implements ILabelController {
 
