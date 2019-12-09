@@ -35,6 +35,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.bridgelabz.fundoo.user.dto.LoginDTO;
 import com.bridgelabz.fundoo.user.dto.RegisterDTO;
 import com.bridgelabz.fundoo.user.dto.SetPasswordDTO;
+import com.bridgelabz.fundoo.user.entity.User;
 import com.bridgelabz.fundoo.user.response.Response;
 import com.bridgelabz.fundoo.user.service.IUserService;
 import com.bridgelabz.fundoo.user.utility.Constant;
@@ -88,7 +89,7 @@ public class UserController {
 		LOG.info(Constant.CONTROLLER_VERIFY_REGISTER_METHOD);
 		return new ResponseEntity<>(
 				new Response(200, Constant.SUCCESS_VERIFY,
-						service.verify(TokenUtility.parseToken(token, Constant.KEY_LOGIN).getSubject())),
+						service.verify(TokenUtility.parseToken(token, Constant.KEY_REGISTER_VERIFY).getSubject())),
 				HttpStatus.OK);
 	}
 
@@ -231,12 +232,17 @@ public class UserController {
 	 */
 
 	@GetMapping("/getuser")
-	public ResponseEntity<Response> getUser(@RequestParam(name = "userEmailToken") String userId) {
+	public ResponseEntity<Response> getUser(@RequestHeader(name = "userEmailToken") String userId) {
 		System.out.println("Get user");
 		return new ResponseEntity<Response>(
 				new Response(200, Constant.GET_USER,
 						service.getUser(TokenUtility.parseToken(userId, Constant.KEY_LOGIN).getSubject())),
 				HttpStatus.OK);
+	}
+
+	@GetMapping("/finduser")
+	public User findUser(@RequestParam(name = "userEmailToken") String userId) {
+		return service.findUser(TokenUtility.parseToken(userId, Constant.KEY_LOGIN).getSubject());
 	}
 
 }

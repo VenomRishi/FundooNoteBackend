@@ -403,24 +403,23 @@ public class ImplNoteService implements INoteService {
 		Note note = noteRepository.findByNoteIdAndUserId(noteId, key).orElse(null);
 		if (note == null)
 			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
-		Collaborator collab = collabRepository.findByUserEmail(collabEmail).orElse(null);
-		if (collab == null) {
+//		Collaborator collab = collabRepository.findByUserEmail(collabEmail).orElse(null);
+//		if (collab == null)
 //			throw new NoteException(Constant.COLLAB_NOT_PRESENT);
-//			// check whether user exist with this email or not
-//			List<User> users = getUserList();
-//			for (User user : users) {
-//				System.out.println(user.getEmail());
-//			}
-//			if (findUserByEmail(collabEmail)==null) {
-//				throw new NoteException(Constant.COLLAB_EMAIL_NOT_PRESENT);
-//			}
-//			collab = new Collaborator();
-//			collab.setUserEmail(collabEmail);
+		if (findUserById(collabEmail) == null) {
+			throw new NoteException(Constant.COLLAB_EMAIL_NOT_PRESENT);
 		}
-		System.out.println(findUserByEmail(collabEmail));
-//		note.getCollaborators().add(collab);
-//		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_UPDATE, noteRepository.save(note));
-		return null;
+
+		Collaborator collab = collabRepository.findByUserEmail(collabEmail).orElse(null);
+//		System.out.println(collab);
+		if (collab == null) {
+			collab = new Collaborator();
+			collab.setUserEmail(collabEmail);
+			collab = collabRepository.save(collab);
+		}
+
+		note.getCollaborators().add(collab);
+		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_UPDATE, noteRepository.save(note));
 	}
 
 	@Override
@@ -447,16 +446,15 @@ public class ImplNoteService implements INoteService {
 	private List<User> getUserList() {
 		Response response = restTemplate.getForObject("http://user-service/getall", Response.class);
 		List<User> users = new ArrayList<User>();
-		users = (ArrayList<User>) response.getData();
+		users = (List<User>) response.getData();
 		return users;
 	}
 
-	private User findUserByEmail(String email) {
-		Response response = restTemplate.getForObject("http://user-service/getuser?userEmailToken="
-				+ TokenUtility.buildToken(email),
-				Response.class);
-		
-		return (User) response.getData();
+	@Override
+	public User findUserById(String email) {
+		User user = restTemplate.getForObject(
+				"http://user-service/finduser?userEmailToken=" + TokenUtility.buildToken(email), User.class);
+		return user;
 	}
 
 	@Override

@@ -49,7 +49,7 @@ public class Constant {
 	public final static String FAILED_REGISTER = "registration failed";
 	public final static String FAILED_TO_VERIFY = "failed to verify..!";
 	public final static String FAILED_TO_SET_PASSWORD = "unable to set new password due to there's not email associated with your token";
-	public final static String REGISTER_EMAIL_FOUND = "not found record ith this email cannot able to create new entry with this email";
+	public final static String REGISTER_EMAIL_FOUND = "not found record with this email cannot able to create new entry with this email";
 	public final static String EMAIL_NOT_FOUND = " not found is database";
 	public final static String UPLOAD_SUCCESS = "upload pic successfull";
 	public final static String DELETE_PROFILE_SUCCESS = "delete profile pic successfull";

@@ -20,6 +20,7 @@ import com.bridgelabz.fundoo.user.dto.SetPasswordDTO;
 import com.bridgelabz.fundoo.user.entity.User;
 import com.bridgelabz.fundoo.user.response.Response;
 
+
 public interface IUserService {
 	/**
 	 * Purpose: method for login the user into the system
@@ -131,5 +132,9 @@ public interface IUserService {
 	 * @return returns the user object back to response
 	 */
 	User getUser(String userId);
+
+	User findUser(String email);
+
+	
 
 }

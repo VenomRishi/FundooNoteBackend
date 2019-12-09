@@ -15,6 +15,7 @@ package com.bridgelabz.note.service;
 import java.util.Date;
 import org.springframework.web.multipart.MultipartFile;
 import com.bridgelabz.note.dto.NoteDTO;
+import com.bridgelabz.note.entity.User;
 import com.bridgelabz.note.dto.LabelToNoteDTO;
 import com.bridgelabz.note.dto.NoteChangesDTO;
 import com.bridgelabz.note.response.Response;
@@ -183,7 +184,7 @@ public interface INoteService {
 	 * @param labelToNoteDTO this is labelToNoteDTO which has the note id and the
 	 *                       list of labels which can be then stored inside the
 	 *                       database of existing note
-	 * @return this method returns a proper response message with true value which
+	 * @return this method returnfallbacks a proper response message with true value which
 	 *         will pass to client side
 	 */
 	Response addLabelToNote(String userIdToken, LabelToNoteDTO labelToNoteDTO);
@@ -370,5 +371,7 @@ public interface INoteService {
 	 * @return returns the proper response of notes object back to user
 	 */
 	Response findNoteByTitleOrDescription(String userId, String key);
+
+	User findUserById(String email);
 
 }

@@ -21,7 +21,6 @@ import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -122,9 +121,9 @@ public class ImplUserService implements IUserService {
 
 		LOG.info(Constant.SERVICE_REGISTER_METHOD);
 		// System.out.println(userRepository.findByEmail(registerDTO.getEmail()));
-		if (!userRepository.findByEmail(registerDTO.getEmail()).isEmpty()) {
-			LOG.error(registerDTO.getEmail() + Constant.REGISTER_EMAIL_FOUND);
-			throw new RegisterException(registerDTO.getEmail() + Constant.REGISTER_EMAIL_FOUND);
+		if (userRepository.findByEmail(registerDTO.getEmail()).isPresent()) {
+			LOG.error(registerDTO.getEmail() + " " + Constant.REGISTER_EMAIL_FOUND);
+			throw new RegisterException(registerDTO.getEmail() + " " + Constant.REGISTER_EMAIL_FOUND);
 		}
 
 		registerDTO.setPassword(config.passwordEncoder().encode(registerDTO.getPassword()));
@@ -340,5 +339,11 @@ public class ImplUserService implements IUserService {
 		System.out.println("In method"+userId);
 		return userRepository.findByEmail(userId).get();
 	}
+
+	@Override
+	public User findUser(String email) {
+		return userRepository.findByEmail(email).get();
+	}
+
 
 }
