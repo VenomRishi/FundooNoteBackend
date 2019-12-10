@@ -5064,3 +5064,8 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2019-12-10 19:38:47.429  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
 2019-12-10 19:38:47.430  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
 2019-12-10 19:43:37.032  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-10 19:48:37.033  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-10 19:49:25.995  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-10 19:49:25.995  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-10 19:49:26.020  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-10 19:49:26.021  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
