@@ -401,22 +401,21 @@ public class ImplNoteService implements INoteService {
 		LOG.info(Constant.SERVICE_COLLAB_ADD);
 		int key = Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject());
 		Note note = noteRepository.findByNoteIdAndUserId(noteId, key).orElse(null);
+		
 		if (note == null)
 			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
-//		Collaborator collab = collabRepository.findByUserEmail(collabEmail).orElse(null);
-//		if (collab == null)
-//			throw new NoteException(Constant.COLLAB_NOT_PRESENT);
+		
 		if (findUserById(collabEmail) == null) {
 			throw new NoteException(Constant.COLLAB_EMAIL_NOT_PRESENT);
 		}
-
-		Collaborator collab = collabRepository.findByUserEmail(collabEmail).orElse(null);
-//		System.out.println(collab);
-		if (collab == null) {
-			collab = new Collaborator();
-			collab.setUserEmail(collabEmail);
-			collab = collabRepository.save(collab);
+		
+		if(note.getCollaborators().stream().anyMatch(i->i.getUserEmail().equals(collabEmail))) {
+			throw new NoteException(Constant.COLLAB_EMAIL_ALREADY_ADDED);
 		}
+		
+		Collaborator collab = new Collaborator();
+		collab.setUserEmail(collabEmail);
+		collab = collabRepository.save(collab);
 
 		note.getCollaborators().add(collab);
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_UPDATE, noteRepository.save(note));

@@ -151,16 +151,15 @@ public class ImplUserService implements IUserService {
 	 * password along with it
 	 * 
 	 * @param userId this is token coming from the mail which is send while
-	 *              registration to user mail account in that mail token is
-	 *              available
+	 *               registration to user mail account in that mail token is
+	 *               available
 	 * @return returns user entity
 	 */
 	@CachePut(value = "user", key = "#userId")
 	@Override
 	public User verify(String userId) {
 		LOG.info(Constant.SERVICE_VERIFY_USER_METHOD);
-		User user = userRepository.findAll().stream().filter(i -> i.getEmail().equals(userId)).findAny()
-				.orElse(null);
+		User user = userRepository.findAll().stream().filter(i -> i.getEmail().equals(userId)).findAny().orElse(null);
 		if (user == null) {
 			LOG.error(Constant.FAILED_TO_VERIFY);
 			throw new RegisterVerifyException(Constant.FAILED_TO_VERIFY);
@@ -217,9 +216,7 @@ public class ImplUserService implements IUserService {
 	public User setPassword(String userId, SetPasswordDTO setPasswordDTO) {
 		LOG.info(Constant.SERVICE_SET_PASSWORD_METHOD);
 
-		
-		User user = userRepository.findAll().stream().filter(i -> i.getEmail().equals(userId)).findAny()
-				.orElse(null);
+		User user = userRepository.findAll().stream().filter(i -> i.getEmail().equals(userId)).findAny().orElse(null);
 		if (user == null) {
 
 			LOG.error(Constant.FAILED_TO_SET_PASSWORD);
@@ -241,41 +238,41 @@ public class ImplUserService implements IUserService {
 			throw new UserException(Constant.EMAIL_NOT_FOUND);
 		}
 
-		String images="";
+		String images = "";
 		String filePath = Constant.UPLOAD_FOLDER;
 		File fileFolder = new File(filePath);
 		if (fileFolder != null) {
-			for(final File file: fileFolder.listFiles()) {
-				if(!file.isDirectory()) {
+			for (final File file : fileFolder.listFiles()) {
+				if (!file.isDirectory()) {
 					String encodeBase64 = null;
 					try {
-						if((Constant.UPLOAD_FOLDER+file.getName()).equals(user.get().getProfile())){
-							String extension= FilenameUtils.getExtension(file.getName());
-							FileInputStream fileInputStream  =new FileInputStream(file);
-							byte[] bytes=new byte[(int)file.length()];
+						if ((Constant.UPLOAD_FOLDER + file.getName()).equals(user.get().getProfile())) {
+							String extension = FilenameUtils.getExtension(file.getName());
+							FileInputStream fileInputStream = new FileInputStream(file);
+							byte[] bytes = new byte[(int) file.length()];
 							fileInputStream.read(bytes);
-							encodeBase64= Base64.getEncoder().encodeToString(bytes);
-							images=("data:image/"+extension+";base64,"+encodeBase64);
+							encodeBase64 = Base64.getEncoder().encodeToString(bytes);
+							images = ("data:image/" + extension + ";base64," + encodeBase64);
 							fileInputStream.close();
 							break;
 						}
+
+					} catch (Exception e) {
 						
- 					} catch (Exception e) {
-						// TODO: handle exception
 					}
 				}
 			}
 		}
-		return new Response(200,Constant.GET_IMAGES_RESPONSE, images);
+		return new Response(200, Constant.GET_IMAGES_RESPONSE, images);
 	}
 
 	/**
 	 * Purpose: this method is used to update upload the user profile picture
 	 * 
-	 * @param image this is MultipartFile coming from the user end
+	 * @param image  this is MultipartFile coming from the user end
 	 * 
 	 * @param userId this parameter helps to specify on which user needs to set the
-	 *              profile picture
+	 *               profile picture
 	 * 
 	 * @return returns user entity
 	 */
@@ -307,7 +304,7 @@ public class ImplUserService implements IUserService {
 	 * picture
 	 * 
 	 * @param userId this parameter helps to specify on which user needs to set the
-	 *              profile picture
+	 *               profile picture
 	 * 
 	 * @return returns user entity
 	 * @throws IOException
@@ -326,24 +323,30 @@ public class ImplUserService implements IUserService {
 		user.setProfile(null);
 		return userRepository.save(user);
 	}
-	
+
 	@Override
 	public Response getAllUsers() {
 		return new Response(200, Constant.UPLOAD_SUCCESS,
 				userRepository.findAll().stream().collect(Collectors.toList()));
 	}
-	
+
 	@Cacheable(value = "user", key = "#userId")
 	@Override
 	public User getUser(String userId) {
-		System.out.println("In method"+userId);
+		System.out.println("In method" + userId);
 		return userRepository.findByEmail(userId).get();
 	}
 
 	@Override
 	public User findUser(String email) {
-		return userRepository.findByEmail(email).get();
-	}
+		Optional<User> user = userRepository.findByEmail(email);
+		System.out.println(user.isEmpty());
+		if (!user.isEmpty()) {
+			return user.get();
+		} else {
+			return null;
+		}
 
+	}
 
 }
