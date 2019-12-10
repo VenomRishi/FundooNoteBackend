@@ -413,11 +413,17 @@ public class ImplNoteService implements INoteService {
 			throw new NoteException(Constant.COLLAB_EMAIL_ALREADY_ADDED);
 		}
 		
-		Collaborator collab = new Collaborator();
-		collab.setUserEmail(collabEmail);
-		collab = collabRepository.save(collab);
+		Collaborator collab =collabRepository.findByUserEmail(collabEmail).orElse(null);
+		
+		if(collab==null) {
+			Collaborator collab2 = new Collaborator();
+			collab2.setUserEmail(collabEmail);
+			collab2 = collabRepository.save(collab2);
+			note.getCollaborators().add(collab2);
+		}else {
+			note.getCollaborators().add(collab);
+		}
 
-		note.getCollaborators().add(collab);
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_UPDATE, noteRepository.save(note));
 	}
 

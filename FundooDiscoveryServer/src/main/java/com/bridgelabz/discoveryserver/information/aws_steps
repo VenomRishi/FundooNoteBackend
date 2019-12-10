@@ -1,0 +1,10 @@
+download key
+
+terminal commands:
+
+chmod 400 fundoo.pem
+ssh -i "fundoo.pem" ubuntu@ec2-54-145-248-202.compute-1.amazonaws.com
+sudo su
+	1. sudo add-apt-repository ppa:webupd8team/java
+	2. sudo apt-get update
+	3. sudo apt-get install oracle-java8-installer
