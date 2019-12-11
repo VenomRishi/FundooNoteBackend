@@ -1776,3 +1776,739 @@
 2019-12-11 13:02:32.673  INFO 15076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
 2019-12-11 13:02:32.673  INFO 15076 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
 2019-12-11 13:02:32.675  INFO 15076 --- [restartedMain] c.b.note.NoteServiceApplication          : Started NoteServiceApplication in 31.281 seconds (JVM running for 39.286)
+2019-12-11 13:07:32.291  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 13:12:32.292  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 13:17:32.292  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 13:22:32.293  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 13:27:32.294  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 13:32:32.295  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 13:37:32.296  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 13:42:32.297  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 13:47:32.298  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 13:52:32.299  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 13:57:32.299  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:02:32.300  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:07:32.301  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:10:09.889  INFO 15076 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-11 14:10:09.889  INFO 15076 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-11 14:10:09.896  INFO 15076 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-12-11 14:10:09.939  INFO 15076 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:10:09.939  INFO 15076 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:11:32.503  INFO 15076 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:11:32.505  INFO 15076 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:11:32.553  INFO 15076 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:11:32.553  INFO 15076 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:12:09.566  INFO 15076 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: add note
+2019-12-11 14:12:09.566  INFO 15076 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: add note
+2019-12-11 14:12:16.818  WARN 15076 --- [I/O dispatcher 1] org.elasticsearch.client.RestClient      : request [PUT http://localhost:9200/fundoo/note/1?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in document index requests is deprecated, use the typeless endpoints instead (/{index}/_doc/{id}, /{index}/_doc, or /{index}/_create/{id})."]
+2019-12-11 14:12:16.983  INFO 15076 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:12:16.983  INFO 15076 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:12:21.762  WARN 15076 --- [I/O dispatcher 3] org.elasticsearch.client.RestClient      : request [POST http://localhost:9200/fundoo/note/_search?rest_total_hits_as_int=true&typed_keys=true&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=query_then_fetch&batched_reduce_size=512] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in search requests is deprecated."]
+2019-12-11 14:12:21.764  WARN 15076 --- [I/O dispatcher 2] org.elasticsearch.client.RestClient      : request [POST http://localhost:9200/fundoo/note/_search?rest_total_hits_as_int=true&typed_keys=true&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=query_then_fetch&batched_reduce_size=512] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in search requests is deprecated."]
+2019-12-11 14:12:21.765  WARN 15076 --- [I/O dispatcher 1] org.elasticsearch.client.RestClient      : request [POST http://localhost:9200/fundoo/note/_search?rest_total_hits_as_int=true&typed_keys=true&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=query_then_fetch&batched_reduce_size=512] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in search requests is deprecated."]
+2019-12-11 14:12:24.319  INFO 15076 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:12:24.319  INFO 15076 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:12:26.466  INFO 15076 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:12:26.466  INFO 15076 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:12:32.301  INFO 15076 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:12:52.244  INFO 15076 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: add note
+2019-12-11 14:12:52.244  INFO 15076 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: add note
+2019-12-11 14:12:52.569  WARN 15076 --- [I/O dispatcher 1] org.elasticsearch.client.RestClient      : request [PUT http://localhost:9200/fundoo/note/2?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in document index requests is deprecated, use the typeless endpoints instead (/{index}/_doc/{id}, /{index}/_doc, or /{index}/_create/{id})."]
+2019-12-11 14:12:52.579  INFO 15076 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:12:52.580  INFO 15076 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:13:06.195  INFO 15076 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: add note
+2019-12-11 14:13:06.195  INFO 15076 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: add note
+2019-12-11 14:13:06.321  WARN 15076 --- [I/O dispatcher 1] org.elasticsearch.client.RestClient      : request [PUT http://localhost:9200/fundoo/note/3?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in document index requests is deprecated, use the typeless endpoints instead (/{index}/_doc/{id}, /{index}/_doc, or /{index}/_create/{id})."]
+2019-12-11 14:13:06.332  INFO 15076 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:13:06.332  INFO 15076 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:13:33.566  WARN 15076 --- [http-nio-8082-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:20:17 UTC": not a valid representation (error: Failed to parse Date value '11 December 2019 02:20:17 UTC': Cannot parse date "11 December 2019 02:20:17 UTC": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd")); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:20:17 UTC": not a valid representation (error: Failed to parse Date value '11 December 2019 02:20:17 UTC': Cannot parse date "11 December 2019 02:20:17 UTC": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: (PushbackInputStream); line: 1, column: 66] (through reference chain: com.bridgelabz.note.dto.NoteDTO["reminder"])]
+2019-12-11 14:13:42.619  WARN 15076 --- [http-nio-8082-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:20:17 UTC": not a valid representation (error: Failed to parse Date value '11 December 2019 02:20:17 UTC': Cannot parse date "11 December 2019 02:20:17 UTC": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd")); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:20:17 UTC": not a valid representation (error: Failed to parse Date value '11 December 2019 02:20:17 UTC': Cannot parse date "11 December 2019 02:20:17 UTC": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: (PushbackInputStream); line: 1, column: 66] (through reference chain: com.bridgelabz.note.dto.NoteDTO["reminder"])]
+2019-12-11 14:13:56.471  WARN 15076 --- [http-nio-8082-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:20:17 UTC": not a valid representation (error: Failed to parse Date value '11 December 2019 02:20:17 UTC': Cannot parse date "11 December 2019 02:20:17 UTC": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd")); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:20:17 UTC": not a valid representation (error: Failed to parse Date value '11 December 2019 02:20:17 UTC': Cannot parse date "11 December 2019 02:20:17 UTC": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: (PushbackInputStream); line: 1, column: 66] (through reference chain: com.bridgelabz.note.dto.NoteDTO["reminder"])]
+2019-12-11 14:14:34.231  INFO 15076 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:14:34.231  INFO 15076 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:14:34.256  INFO 15076 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:14:34.256  INFO 15076 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:14:56.344  WARN 15076 --- [http-nio-8082-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:20:46 UTC": not a valid representation (error: Failed to parse Date value '11 December 2019 02:20:46 UTC': Cannot parse date "11 December 2019 02:20:46 UTC": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd")); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:20:46 UTC": not a valid representation (error: Failed to parse Date value '11 December 2019 02:20:46 UTC': Cannot parse date "11 December 2019 02:20:46 UTC": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: (PushbackInputStream); line: 1, column: 68] (through reference chain: com.bridgelabz.note.dto.NoteDTO["reminder"])]
+2019-12-11 14:15:35.079  INFO 15076 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTE-SERVICE with eureka with status DOWN
+2019-12-11 14:15:35.079  WARN 15076 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576053935079, current=DOWN, previous=UP]
+2019-12-11 14:15:35.079  INFO 15076 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTE-SERVICE/host1:note-service:8082: registering service...
+2019-12-11 14:15:35.083  INFO 15076 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTE-SERVICE/host1:note-service:8082 - registration status: 204
+2019-12-11 14:15:35.085  INFO 15076 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-11 14:15:35.683  WARN 15076 --- [Thread-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-11 14:15:35.683  INFO 15076 --- [Thread-1] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-11 14:15:35.687  INFO 15076 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 14:15:36.351  INFO 15076 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-12-11 14:15:39.351  INFO 15076 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-12-11 14:15:39.445  INFO 15076 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTE-SERVICE/host1:note-service:8082 - deregister  status: 200
+2019-12-11 14:15:39.479  INFO 15076 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-12-11 14:15:39.479  INFO 15076 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-11 14:15:39.481  INFO 15076 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-11 14:15:41.090  INFO 15076 --- [restartedMain] c.b.note.NoteServiceApplication          : No active profile set, falling back to default profiles: default
+2019-12-11 14:15:44.765  INFO 15076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-11 14:15:44.766  INFO 15076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-11 14:15:44.784  INFO 15076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 3 repository interfaces.
+2019-12-11 14:15:44.798  INFO 15076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-11 14:15:44.799  INFO 15076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-11 14:15:44.801  INFO 15076 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.ICollaboratorRepository.
+2019-12-11 14:15:44.802  INFO 15076 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.ILabelRespository.
+2019-12-11 14:15:44.803  INFO 15076 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.INoteRepository.
+2019-12-11 14:15:44.803  INFO 15076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 repository interfaces.
+2019-12-11 14:15:45.090  INFO 15076 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ccdcaf0-0bc2-3994-bffc-353a01365f01
+2019-12-11 14:15:45.113  INFO 15076 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-11 14:15:45.125  INFO 15076 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-11 14:15:45.169  WARN 15076 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-11 14:15:46.274  INFO 15076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-12-11 14:15:46.275  INFO 15076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-11 14:15:46.275  INFO 15076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-11 14:15:46.374  INFO 15076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-11 14:15:46.374  INFO 15076 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5282 ms
+2019-12-11 14:15:46.495  INFO 15076 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-11 14:15:46.504  INFO 15076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-12-11 14:15:46.714  INFO 15076 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-12-11 14:15:46.714  INFO 15076 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-12-11 14:15:47.474  INFO 15076 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-11 14:15:47.474  INFO 15076 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 14:15:47.498  WARN 15076 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-11 14:15:47.974  WARN 15076 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-11 14:15:48.044  WARN 15076 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-11 14:15:48.044  INFO 15076 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-11 14:15:48.085  INFO 15076 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-11 14:15:48.418  WARN 15076 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2019-12-11 14:15:48.432  WARN 15076 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2019-12-11 14:15:48.456  INFO 15076 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-11 14:15:48.458  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-11 14:15:48.538  INFO 15076 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-11 14:15:48.538  INFO 15076 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-11 14:15:48.538  INFO 15076 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-11 14:15:48.538  INFO 15076 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-11 14:15:48.601  INFO 15076 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:15:48.622  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-11 14:15:48.622  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-11 14:15:48.622  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-11 14:15:48.622  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-11 14:15:48.622  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-11 14:15:48.622  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-11 14:15:48.622  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-11 14:15:48.626  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-11 14:15:48.639  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-11 14:15:48.647  INFO 15076 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-11 14:15:48.656  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576053948656 with initial instances count: 3
+2019-12-11 14:15:48.660  INFO 15076 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTE-SERVICE with eureka with status UP
+2019-12-11 14:15:48.660  INFO 15076 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576053948660, current=UP, previous=STARTING]
+2019-12-11 14:15:48.660  INFO 15076 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTE-SERVICE/host1:note-service:8082: registering service...
+2019-12-11 14:15:48.668  INFO 15076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-11 14:15:48.670  INFO 15076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-11 14:15:48.673  INFO 15076 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-11 14:15:48.691  INFO 15076 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTE-SERVICE/host1:note-service:8082 - registration status: 204
+2019-12-11 14:15:48.749  INFO 15076 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
+2019-12-11 14:15:48.879  INFO 15076 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2019-12-11 14:15:48.909  INFO 15076 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingPUT_1
+2019-12-11 14:15:48.983  INFO 15076 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2019-12-11 14:15:49.014  INFO 15076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-12-11 14:15:49.014  INFO 15076 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-12-11 14:15:49.015  INFO 15076 --- [restartedMain] c.b.note.NoteServiceApplication          : Started NoteServiceApplication in 8.59 seconds (JVM running for 4435.626)
+2019-12-11 14:15:49.017  INFO 15076 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-11 14:16:27.327  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-12-11 14:16:27.327  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTE-SERVICE with eureka with status DOWN
+2019-12-11 14:16:27.327  WARN 15076 --- [RMI TCP Connection(78)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576053987327, current=DOWN, previous=UP]
+2019-12-11 14:16:27.327  INFO 15076 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTE-SERVICE/host1:note-service:8082: registering service...
+2019-12-11 14:16:27.330  INFO 15076 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTE-SERVICE/host1:note-service:8082 - registration status: 204
+2019-12-11 14:16:27.330  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-11 14:16:27.331  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 14:16:27.334  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-12-11 14:16:30.335  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-12-11 14:16:30.339  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTE-SERVICE/host1:note-service:8082 - deregister  status: 200
+2019-12-11 14:16:30.348  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-12-11 14:16:30.348  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-12-11 14:16:30.354  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-12-11 14:16:30.359  INFO 15076 --- [RMI TCP Connection(78)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-11 14:16:43.060  INFO 17607 --- [restartedMain] c.b.note.NoteServiceApplication          : No active profile set, falling back to default profiles: default
+2019-12-11 14:16:44.108  INFO 17607 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-11 14:16:44.108  INFO 17607 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-11 14:16:44.278  INFO 17607 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132ms. Found 3 repository interfaces.
+2019-12-11 14:16:44.374  INFO 17607 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-11 14:16:44.375  INFO 17607 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-11 14:16:44.402  INFO 17607 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.ICollaboratorRepository.
+2019-12-11 14:16:44.403  INFO 17607 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.ILabelRespository.
+2019-12-11 14:16:44.403  INFO 17607 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.INoteRepository.
+2019-12-11 14:16:44.403  INFO 17607 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-12-11 14:16:45.041  INFO 17607 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ccdcaf0-0bc2-3994-bffc-353a01365f01
+2019-12-11 14:16:45.705  INFO 17607 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-11 14:16:46.112  INFO 17607 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-11 14:16:46.985  INFO 17607 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-12-11 14:16:47.009  INFO 17607 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-11 14:16:47.009  INFO 17607 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-11 14:16:47.172  INFO 17607 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-11 14:16:47.172  INFO 17607 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4098 ms
+2019-12-11 14:16:48.218  INFO 17607 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-11 14:16:48.356  INFO 17607 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.6.Final}
+2019-12-11 14:16:48.834  INFO 17607 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-11 14:16:49.033  INFO 17607 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-11 14:16:49.334  INFO 17607 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-11 14:16:49.383  INFO 17607 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-12-11 14:16:51.061  INFO 17607 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-11 14:16:51.067  INFO 17607 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-11 14:16:51.136  WARN 17607 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-12-11 14:16:56.151  WARN 17607 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-11 14:16:56.606  WARN 17607 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-11 14:16:56.606  INFO 17607 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-11 14:16:56.686  WARN 17607 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-11 14:16:56.687  INFO 17607 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-11 14:16:56.848  INFO 17607 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-11 14:16:58.509  WARN 17607 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2019-12-11 14:16:58.562  WARN 17607 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with default default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2019-12-11 14:16:58.692  INFO 17607 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-11 14:16:58.868  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-11 14:16:59.280  INFO 17607 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-11 14:16:59.280  INFO 17607 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-11 14:16:59.585  INFO 17607 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-11 14:16:59.585  INFO 17607 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-11 14:16:59.869  INFO 17607 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:16:59.905  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-11 14:16:59.905  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-11 14:16:59.905  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-11 14:16:59.905  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-11 14:16:59.906  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-11 14:16:59.906  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-11 14:16:59.906  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-11 14:17:00.089  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-11 14:17:00.188  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-11 14:17:00.190  INFO 17607 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-11 14:17:00.193  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1576054020192 with initial instances count: 3
+2019-12-11 14:17:00.197  INFO 17607 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTE-SERVICE with eureka with status UP
+2019-12-11 14:17:00.197  INFO 17607 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1576054020197, current=UP, previous=STARTING]
+2019-12-11 14:17:00.199  INFO 17607 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTE-SERVICE/host1:note-service:8082: registering service...
+2019-12-11 14:17:00.204  INFO 17607 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-11 14:17:00.236  INFO 17607 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-11 14:17:00.244  INFO 17607 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTE-SERVICE/host1:note-service:8082 - registration status: 204
+2019-12-11 14:17:00.245  INFO 17607 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-11 14:17:00.382  INFO 17607 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
+2019-12-11 14:17:00.430  INFO 17607 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2019-12-11 14:17:00.448  INFO 17607 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingPUT_1
+2019-12-11 14:17:00.502  INFO 17607 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2019-12-11 14:17:00.559  INFO 17607 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-12-11 14:17:00.560  INFO 17607 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-12-11 14:17:00.562  INFO 17607 --- [restartedMain] c.b.note.NoteServiceApplication          : Started NoteServiceApplication in 19.605 seconds (JVM running for 25.36)
+2019-12-11 14:18:33.490  INFO 17607 --- [http-nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-11 14:18:33.490  INFO 17607 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-11 14:18:33.497  INFO 17607 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-12-11 14:18:33.552  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:18:33.552  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:18:33.553  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:18:33.553  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:18:53.909  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: add note
+2019-12-11 14:18:53.909  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: add note
+2019-12-11 14:18:54.181  WARN 17607 --- [I/O dispatcher 1] org.elasticsearch.client.RestClient      : request [PUT http://localhost:9200/fundoo/note/4?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in document index requests is deprecated, use the typeless endpoints instead (/{index}/_doc/{id}, /{index}/_doc, or /{index}/_create/{id})."]
+2019-12-11 14:18:54.206  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:18:54.206  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:19:00.583  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: update reminder
+2019-12-11 14:19:00.583  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Wed Dec 11 07:50:57 IST 2019
+2019-12-11 14:19:00.583  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: update reminder
+2019-12-11 14:19:00.616  WARN 17607 --- [http-nio-8082-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.note.exception.custom.NoteException: cannot set reminder of before now]
+2019-12-11 14:19:10.858  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: update reminder
+2019-12-11 14:19:10.858  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Wed Dec 11 08:00:57 IST 2019
+2019-12-11 14:19:10.858  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: update reminder
+2019-12-11 14:19:10.862  WARN 17607 --- [http-nio-8082-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.note.exception.custom.NoteException: cannot set reminder of before now]
+2019-12-11 14:19:26.707  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:19:26.708  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:19:26.727  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:19:26.734  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:19:40.614  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:19:40.614  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:19:40.642  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:19:40.642  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:19:45.889  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: update reminder
+2019-12-11 14:19:45.889  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Wed Dec 11 02:22:43 IST 2019
+2019-12-11 14:19:45.889  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: update reminder
+2019-12-11 14:19:45.894  WARN 17607 --- [http-nio-8082-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.bridgelabz.note.exception.custom.NoteException: cannot set reminder of before now]
+2019-12-11 14:19:49.666  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: update reminder
+2019-12-11 14:19:49.666  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Thu Dec 12 02:22:43 IST 2019
+2019-12-11 14:19:49.666  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: update reminder
+2019-12-11 14:19:55.429  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:19:55.429  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:19:57.842  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:19:57.843  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:19:57.866  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:19:57.867  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:20:17.245  WARN 17607 --- [http-nio-8082-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:20:15 UTC": not a valid representation (error: Failed to parse Date value '11 December 2019 02:20:15 UTC': Cannot parse date "11 December 2019 02:20:15 UTC": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd")); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:20:15 UTC": not a valid representation (error: Failed to parse Date value '11 December 2019 02:20:15 UTC': Cannot parse date "11 December 2019 02:20:15 UTC": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: (PushbackInputStream); line: 1, column: 68] (through reference chain: com.bridgelabz.note.dto.NoteDTO["reminder"])]
+2019-12-11 14:21:38.188  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:21:38.189  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:21:38.242  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:21:38.242  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:21:58.256  WARN 17607 --- [http-nio-8082-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:25:53": not a valid representation (error: Failed to parse Date value '11 December 2019 02:25:53': Cannot parse date "11 December 2019 02:25:53": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd")); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "11 December 2019 02:25:53": not a valid representation (error: Failed to parse Date value '11 December 2019 02:25:53': Cannot parse date "11 December 2019 02:25:53": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: (PushbackInputStream); line: 1, column: 68] (through reference chain: com.bridgelabz.note.dto.NoteDTO["reminder"])]
+2019-12-11 14:21:59.908  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:22:08.449  WARN 17607 --- [http-nio-8082-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "12 December 2019 02:22:04": not a valid representation (error: Failed to parse Date value '12 December 2019 02:22:04': Cannot parse date "12 December 2019 02:22:04": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd")); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "12 December 2019 02:22:04": not a valid representation (error: Failed to parse Date value '12 December 2019 02:22:04': Cannot parse date "12 December 2019 02:22:04": not compatible with any of standard forms ("yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE, dd MMM yyyy HH:mm:ss zzz", "yyyy-MM-dd"))
+ at [Source: (PushbackInputStream); line: 1, column: 68] (through reference chain: com.bridgelabz.note.dto.NoteDTO["reminder"])]
+2019-12-11 14:22:16.664  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:22:16.664  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:22:16.701  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:22:16.701  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:22:33.114  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:22:33.114  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:22:33.143  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:22:33.143  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:22:53.099  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: add note
+2019-12-11 14:22:53.099  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: add note
+2019-12-11 14:22:53.728  WARN 17607 --- [I/O dispatcher 1] org.elasticsearch.client.RestClient      : request [PUT http://localhost:9200/fundoo/note/5?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in document index requests is deprecated, use the typeless endpoints instead (/{index}/_doc/{id}, /{index}/_doc, or /{index}/_create/{id})."]
+2019-12-11 14:22:53.741  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:22:53.741  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:23:34.198  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: add label to note
+2019-12-11 14:23:34.198  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: add label to note
+2019-12-11 14:23:38.593  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: add label to note
+2019-12-11 14:23:38.594  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: add label to note
+2019-12-11 14:23:41.731  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: add label to note
+2019-12-11 14:23:41.731  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: add label to note
+2019-12-11 14:23:44.766  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:23:44.766  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:23:49.219  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:23:49.220  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:23:49.253  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:23:49.253  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:23:52.845  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:23:52.845  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:23:56.340  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:23:56.340  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:23:56.382  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:23:56.382  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:26:59.909  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:29:37.580  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:29:37.580  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:29:37.582  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:29:37.582  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:30:20.358  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:30:20.358  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:30:20.440  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:30:20.440  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:30:48.162  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:30:48.162  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:30:48.176  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:30:48.176  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:31:59.910  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:34:24.001  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:34:24.002  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:34:24.031  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:34:24.031  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:35:50.667  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:35:50.667  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:35:50.696  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:35:50.696  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:36:04.376  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:36:04.376  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:36:04.404  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:36:04.404  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:36:35.966  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:36:35.966  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:36:35.994  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:36:35.994  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:36:43.016  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:36:43.016  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:36:59.911  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:37:05.588  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:37:05.588  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:37:05.610  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:37:05.610  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:39:27.154  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:39:27.154  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:39:27.203  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:39:27.203  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:39:32.203  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:39:32.208  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:39:32.226  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:39:32.226  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:39:38.293  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:39:38.293  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:39:38.298  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:39:38.298  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:39:48.923  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:39:48.923  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:39:48.944  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:39:48.944  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:07.032  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:07.032  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:08.077  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:08.077  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:09.838  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:09.838  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:21.434  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:21.434  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:21.444  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:21.444  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:27.309  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:27.310  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:27.332  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:27.332  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:40.594  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:40.594  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:40.630  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:40.630  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:53.930  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:53.931  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:40:53.959  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:40:53.973  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:41:59.912  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:42:35.547  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:42:35.547  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:42:35.569  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:42:35.569  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:42:41.623  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:42:41.623  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:42:41.653  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:42:41.653  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:42:49.111  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:42:49.126  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:42:49.135  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:42:49.135  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:42:59.891  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:42:59.891  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:42:59.911  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:42:59.911  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:08.440  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:08.440  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:08.460  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:08.460  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:10.429  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:10.429  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:11.321  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:11.321  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:12.103  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:12.103  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:13.216  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:13.217  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:14.392  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:14.392  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:15.300  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:15.300  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:16.144  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:16.145  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:37.694  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: add note
+2019-12-11 14:43:37.695  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: add note
+2019-12-11 14:43:39.140  WARN 17607 --- [I/O dispatcher 1] org.elasticsearch.client.RestClient      : request [PUT http://localhost:9200/fundoo/note/6?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in document index requests is deprecated, use the typeless endpoints instead (/{index}/_doc/{id}, /{index}/_doc, or /{index}/_create/{id})."]
+2019-12-11 14:43:39.151  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:39.152  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:40.739  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:40.739  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:42.893  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:42.894  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:51.164  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:51.164  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:55.404  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:55.404  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:43:56.671  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:43:56.671  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:44:53.169  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:44:53.169  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:44:56.949  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:44:56.949  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:45:23.111  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:45:23.111  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:46:59.912  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:47:11.071  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:47:11.071  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:47:11.117  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:47:11.117  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:47:25.452  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:47:25.452  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:47:25.465  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:47:25.465  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:47:34.212  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:47:34.212  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:47:34.234  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:47:34.234  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:51:59.913  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:56:59.914  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 14:57:19.506  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:57:19.506  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 14:57:19.533  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 14:57:19.533  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:01:35.275  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:01:35.275  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:01:36.736  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:01:36.736  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:01:36.755  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: update label to note
+2019-12-11 15:01:36.755  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: update label to note
+2019-12-11 15:01:36.760  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:01:36.760  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:01:39.252  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:01:39.252  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:01:42.476  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: add label to note
+2019-12-11 15:01:42.476  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: add label to note
+2019-12-11 15:01:43.477  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:01:43.477  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:01:49.159  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:01:49.159  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:01:52.214  WARN 17607 --- [http-nio-8082-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 15:01:56.055  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:01:56.055  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:01:59.914  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:02:04.287  WARN 17607 --- [http-nio-8082-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 15:02:11.214  WARN 17607 --- [http-nio-8082-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 15:02:13.327  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:02:13.327  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:02:18.111  WARN 17607 --- [http-nio-8082-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 15:02:25.569  WARN 17607 --- [http-nio-8082-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 15:02:31.402  WARN 17607 --- [http-nio-8082-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 15:02:35.713  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:02:35.713  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:02:35.731  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:02:35.731  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:02:41.995  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:02:41.995  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:02:42.012  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:02:42.012  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:03:10.672  WARN 17607 --- [http-nio-8082-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 15:04:05.733  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:04:05.733  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:04:05.823  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:04:05.823  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:06:59.915  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:11:59.916  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:16:59.916  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:21:59.918  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:26:59.919  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:31:59.919  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:36:59.920  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:41:59.921  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:46:59.922  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:51:59.923  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:56:59.973  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 15:57:13.176  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:57:13.176  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:57:25.184  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 15:57:25.184  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 15:57:31.518  WARN 17607 --- [http-nio-8082-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 16:01:59.974  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:05:42.858  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:05:42.858  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:05:42.892  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:05:42.892  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:05:46.376  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:05:46.376  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:05:50.617  WARN 17607 --- [http-nio-8082-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 16:05:54.320  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:05:54.320  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:05:54.340  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:05:54.340  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:05:56.388  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:05:56.388  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:05:56.395  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:05:56.395  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:06:04.150  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:06:04.150  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:06:04.162  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:06:04.162  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:07:00.013  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:07:44.370  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:07:44.370  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:08:58.228  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:08:58.228  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:08:58.270  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:08:58.270  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:09:11.036  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:09:11.037  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:09:16.760  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:09:16.760  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:09:21.532  WARN 17607 --- [http-nio-8082-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 16:12:00.014  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:17:00.014  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:22:00.015  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:27:00.016  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:30:28.105  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:30:28.105  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:30:28.107  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:30:28.108  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:30:34.670  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:30:34.670  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:30:34.689  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:30:34.689  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:30:37.697  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:30:37.698  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:30:41.775  WARN 17607 --- [http-nio-8082-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [undefined]]
+2019-12-11 16:32:01.584  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:32:30.723  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:32:30.723  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:32:30.731  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:32:30.731  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:32:34.369  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:32:34.370  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:32:39.719  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:32:39.719  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:32:40.523  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:32:40.523  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:32:42.296  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:32:42.296  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:32:44.459  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:32:44.459  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:32:55.419  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:32:55.419  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:32:55.446  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:32:55.446  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:33:27.765  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:33:27.765  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:33:27.792  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:33:27.792  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:33:40.973  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:33:40.973  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:33:44.757  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:33:44.757  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:33:54.525  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:33:54.525  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:34:11.666  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:34:11.666  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:34:11.688  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:34:11.688  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:34:17.185  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:34:17.185  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:35:02.831  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:35:02.831  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:35:03.735  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:35:03.735  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:35:10.871  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:35:10.871  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:35:21.137  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:35:21.137  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:35:27.172  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:35:27.172  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:37:01.585  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:37:20.492  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:37:20.492  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:37:20.514  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:37:20.514  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:37:28.747  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:37:28.747  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:37:28.771  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:37:28.771  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:40:11.640  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:40:11.640  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:40:11.670  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:40:11.670  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:40:50.555  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:40:50.555  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:40:50.574  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:40:50.574  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:41:02.108  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:41:02.109  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:41:02.141  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:41:02.141  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:41:07.996  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:41:07.996  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:42:01.586  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:42:04.620  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:42:04.620  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:42:04.638  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:42:04.639  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:42:11.296  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:42:11.296  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:42:11.323  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:42:11.323  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:44:27.508  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:44:27.508  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:44:27.519  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:44:27.519  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:44:54.601  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:44:54.601  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:44:54.625  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:44:54.625  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:45:14.462  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:45:14.462  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:45:14.493  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:45:14.494  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:45:17.749  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:45:17.749  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:45:17.776  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:45:17.776  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:45:22.489  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:45:22.489  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:45:23.186  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:45:23.186  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:45:27.791  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:45:27.791  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:45:51.218  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:45:51.219  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:45:51.239  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:45:51.239  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:45:56.349  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:45:56.349  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:46:04.984  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:46:04.984  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:46:07.312  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:46:07.313  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:46:10.158  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:46:10.158  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:47:01.587  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:48:08.762  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:48:08.762  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:48:08.782  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:48:08.782  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:48:15.466  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:48:15.466  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:48:15.481  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:48:15.481  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:48:30.020  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:48:30.020  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:48:30.038  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:48:30.038  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:48:39.277  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:48:39.277  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:48:39.305  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:48:39.305  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:48:44.272  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:48:44.272  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:48:46.806  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:48:46.806  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:01.475  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:01.475  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:01.507  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:01.507  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:13.864  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:13.864  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:13.887  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:13.887  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:17.302  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:17.302  INFO 17607 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:21.061  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:21.061  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:40.183  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:40.183  INFO 17607 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:40.207  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:40.207  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:46.510  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:46.510  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:49.667  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:49.667  INFO 17607 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:49:53.464  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:49:53.465  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:50:12.442  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:50:12.442  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:50:12.467  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:50:12.467  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:50:15.121  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:50:15.122  INFO 17607 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:50:21.265  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:50:21.265  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:51:43.632  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:51:43.632  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:51:43.661  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:51:43.661  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:51:46.611  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:51:46.611  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:51:52.364  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:51:52.364  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:52:01.588  INFO 17607 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-11 16:52:14.191  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:52:14.191  INFO 17607 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:52:14.227  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:52:14.227  INFO 17607 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:52:19.944  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:52:19.944  INFO 17607 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:52:19.973  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:52:19.973  INFO 17607 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:52:21.322  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:52:21.322  INFO 17607 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-11 16:52:24.514  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-11 16:52:24.514  INFO 17607 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
