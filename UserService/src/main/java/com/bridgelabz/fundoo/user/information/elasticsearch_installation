@@ -4,3 +4,7 @@ network.host: localhost
 sudo systemctl start elasticsearch
 sudo systemctl enable elasticsearch
 localhost:9200
+
+
+
+curl -XDELETE localhost:9200/fundoo (for delete everything) 

@@ -401,26 +401,26 @@ public class ImplNoteService implements INoteService {
 		LOG.info(Constant.SERVICE_COLLAB_ADD);
 		int key = Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject());
 		Note note = noteRepository.findByNoteIdAndUserId(noteId, key).orElse(null);
-		
+
 		if (note == null)
 			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
-		
+
 		if (findUserById(collabEmail) == null) {
 			throw new NoteException(Constant.COLLAB_EMAIL_NOT_PRESENT);
 		}
-		
-		if(note.getCollaborators().stream().anyMatch(i->i.getUserEmail().equals(collabEmail))) {
+
+		if (note.getCollaborators().stream().anyMatch(i -> i.getUserEmail().equals(collabEmail))) {
 			throw new NoteException(Constant.COLLAB_EMAIL_ALREADY_ADDED);
 		}
-		
-		Collaborator collab =collabRepository.findByUserEmail(collabEmail).orElse(null);
-		
-		if(collab==null) {
+
+		Collaborator collab = collabRepository.findByUserEmail(collabEmail).orElse(null);
+
+		if (collab == null) {
 			Collaborator collab2 = new Collaborator();
 			collab2.setUserEmail(collabEmail);
 			collab2 = collabRepository.save(collab2);
 			note.getCollaborators().add(collab2);
-		}else {
+		} else {
 			note.getCollaborators().add(collab);
 		}
 
@@ -469,7 +469,9 @@ public class ImplNoteService implements INoteService {
 
 	@Override
 	public Response findNoteByTitleOrDescription(String userId, String key) {
-		if (noteRepository.findById(Integer.parseInt(TokenUtility.parseToken(userId).getSubject())).isPresent()) {
+		Note note = noteRepository.findById(Integer.parseInt(TokenUtility.parseToken(userId).getSubject()))
+				.orElse(null);
+		if (note == null) {
 			throw new NoteException(Constant.USER_ID_NOT_FOUND);
 		}
 		try {
