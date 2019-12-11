@@ -135,6 +135,8 @@ public interface IUserService {
 
 	User findUser(String email);
 
+	User findUserById(int id);
+
 	
 
 }

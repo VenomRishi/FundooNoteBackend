@@ -372,6 +372,8 @@ public interface INoteService {
 	 */
 	Response findNoteByTitleOrDescription(String userId, String key);
 
-	User findUserById(String email);
+	User findUserByEmail(String email);
+
+	User findUserById(int id);
 
 }

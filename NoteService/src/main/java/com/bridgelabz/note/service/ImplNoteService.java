@@ -75,8 +75,8 @@ public class ImplNoteService implements INoteService {
 			throw new NoteException(Constant.NOTE_SAVE_ERROR);
 		Note note = config.modelMapper().map(addDTO, Note.class);
 		int userId = Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject());
-//		if (findUserById(userId) == null)
-//			throw new NoteException(Constant.USER_ID_NOT_FOUND);
+		if (findUserById(userId) == null)
+			throw new NoteException(Constant.USER_ID_NOT_FOUND);
 		note.setUserId(userId);
 		note = noteRepository.save(note);
 		try {
@@ -399,13 +399,16 @@ public class ImplNoteService implements INoteService {
 	@Override
 	public Response addCollabToNote(String userIdToken, String collabEmail, int noteId) {
 		LOG.info(Constant.SERVICE_COLLAB_ADD);
-		int key = Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject());
-		Note note = noteRepository.findByNoteIdAndUserId(noteId, key).orElse(null);
+		Note note = noteRepository
+				.findByNoteIdAndUserId(noteId, Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject()))
+				.orElse(null);
 
 		if (note == null)
 			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
 
-		if (findUserById(collabEmail) == null) {
+		User user = findUserByEmail(collabEmail);
+
+		if (user == null) {
 			throw new NoteException(Constant.COLLAB_EMAIL_NOT_PRESENT);
 		}
 
@@ -418,6 +421,9 @@ public class ImplNoteService implements INoteService {
 		if (collab == null) {
 			Collaborator collab2 = new Collaborator();
 			collab2.setUserEmail(collabEmail);
+			collab2.setUserFname(user.getFname());
+			collab2.setUserLname(user.getLname());
+			collab2.setUserImagePath(user.getProfile());
 			collab2 = collabRepository.save(collab2);
 			note.getCollaborators().add(collab2);
 		} else {
@@ -456,9 +462,17 @@ public class ImplNoteService implements INoteService {
 	}
 
 	@Override
-	public User findUserById(String email) {
+	public User findUserByEmail(String email) {
 		User user = restTemplate.getForObject(
 				"http://user-service/finduser?userEmailToken=" + TokenUtility.buildToken(email), User.class);
+		return user;
+	}
+	
+	@Override
+	public User findUserById(int id) {
+		User user = restTemplate.getForObject(
+				"http://user-service/finduserbyid?userIdToken=" + TokenUtility.buildToken(String.valueOf(id)),
+				User.class);
 		return user;
 	}
 

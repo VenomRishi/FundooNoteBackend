@@ -241,8 +241,13 @@ public class UserController {
 	}
 
 	@GetMapping("/finduser")
-	public User findUser(@RequestParam(name = "userEmailToken") String userId) {
+	public User findUserByEmail(@RequestParam(name = "userEmailToken") String userId) {
 		return service.findUser(TokenUtility.parseToken(userId, Constant.KEY_LOGIN).getSubject());
+	}
+
+	@GetMapping("/finduserbyid")
+	public User findUserById(@RequestParam(name = "userIdToken") String userId) {
+		return service.findUserById(Integer.parseInt(TokenUtility.parseToken(userId, Constant.KEY_LOGIN).getSubject()));
 	}
 
 }

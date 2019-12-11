@@ -340,7 +340,17 @@ public class ImplUserService implements IUserService {
 	@Override
 	public User findUser(String email) {
 		Optional<User> user = userRepository.findByEmail(email);
-		System.out.println(user.isEmpty());
+		if (!user.isEmpty()) {
+			return user.get();
+		} else {
+			return null;
+		}
+
+	}
+
+	@Override
+	public User findUserById(int id) {
+		Optional<User> user = userRepository.findById(id);
 		if (!user.isEmpty()) {
 			return user.get();
 		} else {
