@@ -6427,3 +6427,448 @@ java.lang.NullPointerException: null
 2019-12-12 18:51:10.218  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: remove collaborator from note
 2019-12-12 18:51:10.218  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: remove collaborator
 2019-12-12 18:52:09.531  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 18:57:09.531  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:02:09.532  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:03:08.635  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:03:08.635  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:03:08.664  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:03:08.664  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:04:56.694  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:04:56.694  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:04:56.701  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:04:56.701  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:07:09.533  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:07:11.771  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:07:11.771  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:07:11.804  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:07:11.804  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:07:25.605  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:07:25.605  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:07:25.625  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:07:25.625  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:08:55.339  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:08:55.339  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:08:55.370  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:08:55.371  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:09:01.706  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:09:01.706  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:09:04.536  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:09:04.537  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:10:09.389  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:10:09.389  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:10:09.419  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:10:09.419  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:12:09.534  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:12:18.494  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:12:18.495  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:12:18.514  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:12:18.515  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:14:00.050  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:14:00.050  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:14:00.080  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:14:00.080  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:14:23.132  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:14:23.132  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:14:23.160  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:14:23.160  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:14:32.515  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:14:32.515  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:14:32.519  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:14:32.519  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:15:02.014  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:15:02.014  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:15:02.038  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:15:02.038  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:15:06.938  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:15:06.938  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:15:06.962  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:15:06.963  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:15:47.601  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:15:47.602  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:15:47.622  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:15:47.622  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:16:03.207  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:16:03.208  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:16:03.229  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:16:03.229  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:16:40.575  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:16:40.575  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:16:40.598  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:16:40.598  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:17:09.534  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:17:09.720  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:17:09.720  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:17:09.756  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:17:09.756  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:17:39.724  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:17:39.724  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:17:39.745  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:17:39.745  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:18:14.207  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:18:14.207  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:18:14.223  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:18:14.223  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:18:48.436  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:18:48.436  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:18:48.448  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:18:48.448  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:19:09.635  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:19:09.635  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:19:09.676  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:19:09.676  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:19:23.839  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:19:23.839  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:19:23.889  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:19:23.889  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:19:46.453  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:19:46.453  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:19:46.472  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:19:46.472  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:20:06.958  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:20:06.959  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:20:06.980  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:20:06.980  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:20:21.737  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:20:21.737  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:20:21.757  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:20:21.758  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:20:32.715  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:20:32.715  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:20:32.739  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:20:32.739  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:21:10.238  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:21:10.238  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:21:10.242  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:21:10.242  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:22:08.517  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:22:08.517  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:22:08.533  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:22:08.533  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:22:09.535  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:22:50.968  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:22:50.969  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:22:50.978  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:22:50.978  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:22:54.540  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:22:54.540  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:22:54.564  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:22:54.564  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:23:29.361  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:23:29.361  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:23:29.384  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:23:29.384  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:24:36.755  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:24:36.755  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:24:36.788  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:24:36.789  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:27:09.535  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:32:09.536  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:33:41.704  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:33:41.704  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:33:41.725  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:33:41.725  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:35:57.363  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:35:57.363  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:36:05.377  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:36:05.377  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:36:08.320  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:36:08.320  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:36:08.349  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:36:08.349  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:36:11.202  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:36:11.202  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:36:12.845  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:36:12.845  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:36:14.278  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:36:14.278  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:36:15.662  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:36:15.662  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:36:18.734  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:36:18.734  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:36:18.762  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:36:18.762  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:37:09.537  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:40:00.533  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:40:00.551  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:40:00.571  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:40:00.571  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:40:21.771  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:40:21.772  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:40:21.784  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:40:21.784  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:40:23.335  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:40:23.335  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:41:07.862  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:41:07.862  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:41:07.876  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:41:07.876  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:41:12.693  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:41:12.693  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:41:12.707  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:41:12.707  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:41:14.532  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:41:14.533  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:41:20.090  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:41:20.090  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:41:20.096  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:41:20.096  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:41:44.201  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:41:44.201  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:41:44.222  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:41:44.223  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:42:05.269  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:42:05.269  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:42:05.288  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:42:05.288  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:42:09.538  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:42:31.705  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:42:31.705  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:42:31.720  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:42:31.720  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:42:35.251  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:42:35.251  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:42:56.058  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:42:56.058  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:42:56.081  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:42:56.082  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:42:57.714  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:42:57.714  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:43:12.988  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:43:12.988  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:43:13.013  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:43:13.013  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:43:15.697  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:43:15.698  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:43:15.717  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:43:15.717  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:43:19.649  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:43:19.649  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:43:25.596  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:43:25.596  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:43:25.616  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:43:25.616  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:43:49.978  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:43:49.978  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:43:50.001  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:43:50.001  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:44:57.894  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:44:57.894  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:44:59.762  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:44:59.762  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:45:01.280  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:45:01.280  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:45:02.713  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:45:02.713  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:45:06.155  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:45:06.155  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:45:06.177  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:45:06.177  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:45:17.850  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:45:17.850  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:45:24.212  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:45:24.212  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:46:22.615  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:46:22.615  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:46:22.639  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:46:22.640  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:46:36.968  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:46:36.968  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:46:36.984  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:46:36.985  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:47:09.538  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:47:25.364  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:47:25.364  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:47:25.373  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:47:25.373  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:47:56.083  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:47:56.083  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:47:57.200  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:47:57.200  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:48:00.908  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:48:00.908  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:48:01.442  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:48:01.442  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:48:41.604  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:48:41.604  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:48:44.328  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:48:44.328  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:48:52.400  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:48:52.400  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:48:56.207  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:48:56.207  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:48:59.660  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:48:59.660  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:49:13.930  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: update note
+2019-12-12 19:49:13.930  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: update note
+2019-12-12 19:49:21.761  WARN 3904 --- [I/O dispatcher 9] org.elasticsearch.client.RestClient      : request [GET http://localhost:9200/fundoo/note/2] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."]
+2019-12-12 19:49:25.510  WARN 3904 --- [I/O dispatcher 9] org.elasticsearch.client.RestClient      : request [POST http://localhost:9200/fundoo/note/2/_update?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.4.2-2f90bbf7b93631e52bafb59b3b049cb44ec25e96 "[types removal] Specifying types in document update requests is deprecated, use the endpoint /{index}/_update/{id} instead."]
+2019-12-12 19:49:25.764  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:49:25.764  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:49:31.039  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:49:31.039  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:51:51.770  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:51:51.771  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:51:51.790  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:51:51.790  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:52:09.539  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:52:15.014  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:52:15.014  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:52:15.032  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:52:15.032  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:52:34.038  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:52:34.038  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:52:34.059  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:52:34.059  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:55:35.066  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:55:35.066  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:55:39.426  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:55:39.426  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:56:46.913  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:56:46.913  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:56:46.925  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:56:46.925  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:57:00.099  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:57:00.099  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:57:00.120  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:57:00.120  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:57:03.530  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:57:03.530  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:57:09.540  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 19:57:28.041  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:57:28.041  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:57:28.068  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:57:28.068  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:57:34.100  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:57:34.101  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:57:39.742  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:57:39.743  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:57:56.467  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:57:56.467  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:57:56.479  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:57:56.479  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:58:07.447  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:58:07.447  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:58:07.474  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:58:07.475  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:58:37.148  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:58:37.148  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:58:37.161  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:58:37.161  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:59:13.037  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:59:13.037  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:59:13.053  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:59:13.053  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:59:29.575  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:59:29.575  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:59:29.587  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:59:29.587  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:59:55.597  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:59:55.597  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 19:59:55.609  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 19:59:55.609  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:00:03.339  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:00:03.339  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:00:03.368  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:00:03.368  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:00:23.499  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:00:23.499  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:00:23.501  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:00:23.501  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:00:59.151  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:00:59.151  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:00:59.168  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:00:59.169  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:01:09.970  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:01:09.970  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:01:10.006  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:01:10.006  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:01:24.081  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:01:24.081  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:01:24.092  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:01:24.093  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:01:49.993  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:01:49.993  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:01:50.014  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:01:50.014  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:02:09.541  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-12 20:02:12.034  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:02:12.035  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:02:12.048  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:02:12.048  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:02:37.431  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:02:37.431  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:02:37.440  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:02:37.440  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:03:05.575  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:03:05.575  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:03:05.598  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:03:05.598  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:03:22.837  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:03:22.837  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:03:22.851  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:03:22.851  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:03:30.127  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:03:30.127  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:03:30.139  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:03:30.139  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:03:45.373  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:03:45.373  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:03:45.385  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:03:45.385  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:03:48.095  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:03:48.095  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:07.294  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:07.294  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:07.308  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:07.308  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:08.976  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:08.976  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:08.980  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:08.980  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:16.376  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:16.376  INFO 3904 --- [http-nio-8082-exec-4] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:16.386  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:16.386  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:21.492  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:21.493  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:21.503  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:21.504  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:29.011  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:29.011  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:29.027  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:29.027  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:36.538  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:36.538  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:36.552  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:36.552  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:50.906  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:50.906  INFO 3904 --- [http-nio-8082-exec-7] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:50.920  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:50.920  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:57.622  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:57.622  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:04:57.638  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:04:57.638  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:05:24.374  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:05:24.374  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:05:24.389  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:05:24.389  INFO 3904 --- [http-nio-8082-exec-2] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:05:56.406  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:05:56.406  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:05:56.419  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:05:56.419  INFO 3904 --- [http-nio-8082-exec-9] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:06:11.908  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:06:11.908  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:06:35.743  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:06:35.744  INFO 3904 --- [http-nio-8082-exec-3] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:06:35.762  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:06:35.762  INFO 3904 --- [http-nio-8082-exec-1] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:06:38.641  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:06:38.641  INFO 3904 --- [http-nio-8082-exec-10] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:06:40.742  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:06:40.743  INFO 3904 --- [http-nio-8082-exec-6] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:06:43.281  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:06:43.281  INFO 3904 --- [http-nio-8082-exec-5] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:06:43.295  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.controller.NoteController       : Controller: get note by filter
+2019-12-12 20:06:43.295  INFO 3904 --- [http-nio-8082-exec-8] c.b.note.service.ImplNoteService         : Service: get by filter
+2019-12-12 20:07:09.541  INFO 3904 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
