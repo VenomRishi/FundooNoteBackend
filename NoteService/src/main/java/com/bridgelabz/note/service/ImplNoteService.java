@@ -12,6 +12,7 @@
 
 package com.bridgelabz.note.service;
 
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -25,6 +26,10 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
@@ -74,18 +79,42 @@ public class ImplNoteService implements INoteService {
 		if (addDTO.getTitle().isBlank() && addDTO.getDescription().isBlank())
 			throw new NoteException(Constant.NOTE_SAVE_ERROR);
 		Note note = config.modelMapper().map(addDTO, Note.class);
-		int userId = Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject());
-		if (findUserById(userId) == null)
+
+		User user = findUserById(Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject()));
+		if (user == null)
 			throw new NoteException(Constant.USER_ID_NOT_FOUND);
-		note.setUserId(userId);
+		note.setUserId(user.getUid());
+		note.setUserFname(user.getFname());
+		note.setUserLname(user.getLname());
+		note.setUserEmail(user.getEmail());
 		note = noteRepository.save(note);
 		try {
 			eSService.addNote(note);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_SAVE, note);
+	}
+
+	@Override
+	public Response getNoteProfile(String userIdToken, int noteId) {
+		
+		User user = findUserById(Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject()));
+		Note note = noteRepository.findById(noteId).orElse(null);
+		if(note==null) {
+			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
+		}
+		if (user==null) {
+			throw new NoteException(Constant.USER_ID_NOT_FOUND);
+		}
+		
+		HttpHeaders headers = new HttpHeaders();
+		headers.set("userEmailToken", TokenUtility.buildToken(user.getEmail()));
+        HttpEntity<String> entity = new HttpEntity<String>(headers);
+        ResponseEntity<Response> responseEntity = restTemplate.exchange("http://user-service/getprofile", HttpMethod.GET, entity, Response.class);
+		
+		System.out.println(responseEntity.getBody());
+		return null;
 	}
 
 	@Override
@@ -140,8 +169,11 @@ public class ImplNoteService implements INoteService {
 		if (note == null) {
 			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
 		}
-		int key = Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject());
-		note = utility.setValueFromDTOToNoteModel(key, updateDTO, note);
+		User user = findUserById(Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject()));
+		if (user == null)
+			throw new NoteException(Constant.USER_ID_NOT_FOUND);
+
+		note = utility.setValueFromDTOToNoteModel(user.getUid(), updateDTO, note);
 		List<Label> labelsDb = note.getLabels();
 		List<Label> labelsNote = updateDTO.getLabels();
 
@@ -156,7 +188,6 @@ public class ImplNoteService implements INoteService {
 		try {
 			eSService.updateNote(note);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_UPDATE, note);
@@ -423,7 +454,6 @@ public class ImplNoteService implements INoteService {
 			collab2.setUserEmail(collabEmail);
 			collab2.setUserFname(user.getFname());
 			collab2.setUserLname(user.getLname());
-			collab2.setUserImagePath(user.getProfile());
 			collab2 = collabRepository.save(collab2);
 			note.getCollaborators().add(collab2);
 		} else {
@@ -431,6 +461,52 @@ public class ImplNoteService implements INoteService {
 		}
 
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_UPDATE, noteRepository.save(note));
+	}
+
+	@Override
+	public Response getCollabProfile(String userIdToken, int noteId, int collabId) {
+		// TODO	
+		User user = findUserById(Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject()));
+		Note note = noteRepository.findById(noteId).orElse(null);
+		if(note==null) {
+			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
+		}
+		if (user==null) {
+			throw new NoteException(Constant.USER_ID_NOT_FOUND);
+		}
+		
+		if(note.getCollaborators().stream().anyMatch(i->i.getCollabId()==collabId)) {
+			throw new NoteException(Constant.COLLAB_NOT_PRESENT_WITH_ID);
+		}
+		Collaborator collab = note.getCollaborators().stream().filter(i->i.getCollabId()==collabId).findFirst().get();
+
+//		String images = "";
+//		String filePath = Constant.UPLOAD_FOLDER;
+//		File fileFolder = new File(filePath);
+//		if (fileFolder != null) {
+//			for (final File file : fileFolder.listFiles()) {
+//				if (!file.isDirectory()) {
+//					String encodeBase64 = null;
+//					try {
+//						if ((Constant.UPLOAD_FOLDER + file.getName()).equals(collab.getUserImagePath())) {
+//							String extension = FilenameUtils.getExtension(file.getName());
+//							FileInputStream fileInputStream = new FileInputStream(file);
+//							byte[] bytes = new byte[(int) file.length()];
+//							fileInputStream.read(bytes);
+//							encodeBase64 = Base64.getEncoder().encodeToString(bytes);
+//							images = ("data:image/" + extension + ";base64," + encodeBase64);
+//							fileInputStream.close();
+//							break;
+//						}
+//
+//					} catch (Exception e) {
+//						
+//					}
+//				}
+//			}
+//		}
+//		return new Response(200, Constant.GET_IMAGES_RESPONSE, images);
+		return null;
 	}
 
 	@Override
@@ -467,7 +543,7 @@ public class ImplNoteService implements INoteService {
 				"http://user-service/finduser?userEmailToken=" + TokenUtility.buildToken(email), User.class);
 		return user;
 	}
-	
+
 	@Override
 	public User findUserById(int id) {
 		User user = restTemplate.getForObject(

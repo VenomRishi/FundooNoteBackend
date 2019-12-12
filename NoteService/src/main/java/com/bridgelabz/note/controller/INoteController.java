@@ -42,6 +42,8 @@ public interface INoteController {
 	 *         message on the client application
 	 */
 	ResponseEntity<Response> add(String userIdToken, NoteDTO addDTO);
+	
+	ResponseEntity<Response> getNoteProfile(String userIdToken, int noteId);
 
 	/**
 	 * Purpose: this method is used handle the request of @GetMapping this method
@@ -301,6 +303,8 @@ public interface INoteController {
 	 *         message on the client application
 	 */
 	ResponseEntity<Response> addCollabToNote(String userIdToken, String collabEmail, int noteId);
+	
+	ResponseEntity<Response> getCollabProfile(String userIdToken, int noteId, int collabId);
 
 	/**
 	 * Purpose: this method is used to remove collaborator to note
@@ -360,5 +364,11 @@ public interface INoteController {
 	 *         message on the client application
 	 */
 	ResponseEntity<Response> findNoteByTitleOrDescription(String userIdToken, String key);
+
+	
+
+	
+
+	
 
 }

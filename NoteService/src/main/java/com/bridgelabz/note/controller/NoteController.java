@@ -57,6 +57,13 @@ public class NoteController implements INoteController {
 	}
 
 	@Override
+	@GetMapping("/getnoteprofile")
+	public ResponseEntity<Response> getNoteProfile(@RequestHeader(name = "userId") String userIdToken,
+			@RequestParam(name = "noteId") int noteId) {
+		return new ResponseEntity<Response>(service.getNoteProfile(userIdToken, noteId), HttpStatus.OK);
+	}
+
+	@Override
 	@PutMapping("/get")
 	public ResponseEntity<Response> get(@RequestHeader(name = "userId") String userId) {
 		LOG.info(Constant.CONTROLLER_GET);
@@ -111,14 +118,16 @@ public class NoteController implements INoteController {
 
 	@Override
 	@PutMapping("/archive")
-	public ResponseEntity<Response> archive(@RequestHeader(name = "userId") String userIdToken, @RequestParam(name = "noteId") int noteId) {
+	public ResponseEntity<Response> archive(@RequestHeader(name = "userId") String userIdToken,
+			@RequestParam(name = "noteId") int noteId) {
 		LOG.info(Constant.CONTROLLER_ARCHIVE);
 		return new ResponseEntity<Response>(service.archive(userIdToken, noteId), HttpStatus.OK);
 	}
 
 	@Override
 	@PutMapping("/archivepin")
-	public ResponseEntity<Response> archivePin(@RequestHeader(name = "userId") String userIdToken, @RequestParam(name = "noteId") int noteId) {
+	public ResponseEntity<Response> archivePin(@RequestHeader(name = "userId") String userIdToken,
+			@RequestParam(name = "noteId") int noteId) {
 		LOG.info(Constant.CONTROLLER_ARCHIVE_PIN);
 		return new ResponseEntity<Response>(service.archive(userIdToken, noteId), HttpStatus.OK);
 	}
@@ -138,10 +147,11 @@ public class NoteController implements INoteController {
 		LOG.info(Constant.CONTROLLER_ADD_LABEL_TO_NOTE);
 		return new ResponseEntity<Response>(service.addLabelToNote(userIdToken, labelToNoteDTO), HttpStatus.OK);
 	}
-	
+
 	@Override
 	@PutMapping("/update/updatelabeltonote")
-	public ResponseEntity<Response> updateLabelToNote(@RequestHeader String userIdToken, @RequestBody LabelToNoteDTO labelToNoteDTO){
+	public ResponseEntity<Response> updateLabelToNote(@RequestHeader String userIdToken,
+			@RequestBody LabelToNoteDTO labelToNoteDTO) {
 		LOG.info(Constant.CONTROLLER_UPDATE_LABEL_TO_NOTE);
 		return new ResponseEntity<Response>(service.updateLabelToNote(userIdToken, labelToNoteDTO), HttpStatus.OK);
 	}
@@ -202,6 +212,12 @@ public class NoteController implements INoteController {
 		LOG.info(Constant.CONTROLLER_ADD_COLLAB_TO_NOTE);
 		return new ResponseEntity<Response>(service.addCollabToNote(userIdToken, collabEmail, noteId), HttpStatus.OK);
 	}
+	
+	@Override
+	@GetMapping("/getcollabprofile")
+	public ResponseEntity<Response> getCollabProfile(@RequestHeader(name="userIdToken")String userIdToken, @RequestParam(name = "noteId") int noteId, @RequestParam(name = "collabId") int collabId){
+		return new ResponseEntity<Response>(service.getCollabProfile(userIdToken, noteId, collabId), HttpStatus.OK);
+	}
 
 	@Override
 	@PutMapping("/removecollabfromnote")
@@ -219,9 +235,9 @@ public class NoteController implements INoteController {
 		LOG.info(Constant.CONTROLLER_GET_ALL_USERS);
 		return new ResponseEntity<Response>(service.getAllUsers(), HttpStatus.OK);
 	}
-	
-	public ResponseEntity<Response> fallback(){
-		return new ResponseEntity<Response>(service.fallback(),HttpStatus.OK);
+
+	public ResponseEntity<Response> fallback() {
+		return new ResponseEntity<Response>(service.fallback(), HttpStatus.OK);
 	}
 
 	@Override

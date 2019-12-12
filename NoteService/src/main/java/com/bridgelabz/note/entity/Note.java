@@ -84,6 +84,15 @@ public class Note implements Serializable{
 	@Column(name = "user_id")
 	@NotNull
 	private int userId;
+	
+	@Column(name = "user_fname")
+	private String userFname;
+	
+	@Column(name = "user_lname")
+	private String userLname;
+	
+	@Column(name = "user_email")
+	private String userEmail;
 
 	@JsonIgnoreProperties(value = "notes")
 	@ManyToMany(fetch = FetchType.LAZY)

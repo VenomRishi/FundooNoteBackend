@@ -42,6 +42,8 @@ public interface INoteService {
 	 *         side
 	 */
 	Response add(String userIdToken, NoteDTO addDTO);
+	
+	Response getNoteProfile(String userIdToken, int noteId);
 
 	/**
 	 * Purpose: this method is used to show all notes records related a particular
@@ -312,6 +314,8 @@ public interface INoteService {
 	 *         find the media files
 	 */
 	Response addCollabToNote(String userIdToken, String collabEmail, int noteId);
+	
+	Response getCollabProfile(String userIdToken, int noteId, int collabId);
 
 	/**
 	 * Purpose: this method is used to remove collaborator to the note
@@ -375,5 +379,7 @@ public interface INoteService {
 	User findUserByEmail(String email);
 
 	User findUserById(int id);
+
+		
 
 }

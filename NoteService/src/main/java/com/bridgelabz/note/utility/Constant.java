@@ -74,6 +74,7 @@ public class Constant {
 	public static final String COLLABORATOR_ALREADY_PRESENT = "cannot add collaborator because already present";
 	public static final String COLLABORATOR_NOT_PRESENT = "cannot remove collaborator because not present";
 	public static final String COLLAB_NOT_PRESENT = "No collaborator found with this email";
+	public static final String COLLAB_NOT_PRESENT_WITH_ID = "No collaborator found with this email";
 	public static final String USER_ID_NOT_FOUND = "No user present with this id";
 	public static final String COLLAB_EMAIL_NOT_PRESENT = "Cannot find email";
 	public static final String COLLAB_EMAIL_ALREADY_ADDED = "Collaborator already added";
@@ -99,6 +100,7 @@ public class Constant {
 	public final static String NOTE_UPDATE_NOTE_COLOR = "Note color updated successfully";
 	public final static String NOTE_USER_LIST = "Note User list";
 	public final static String NOTE_HYSTIX_FALLBACK_RESPONSE = "Hystix response of failure of getAllUsers method";
+	public final static String GET_IMAGES_RESPONSE = "get images response";
 
 	// label related
 	public final static String LABEL_SAVE = "Label stored successfully";
@@ -128,5 +130,6 @@ public class Constant {
 	public static final String TYPE = "note";
 	public static final String ESRESPONSE = "Elastic Search Response";
 	public static final String ESCONTROLLER_ADD = "Elastic Search Controller: add";
+	public final static String UPLOAD_FOLDER = "/home/admin1/Documents/workspace-spring/FundooNoteBackend/UserService/uploads/";;
 
 }

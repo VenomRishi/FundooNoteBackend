@@ -62,9 +62,6 @@ public class Collaborator implements Serializable{
 	
 	@Column(name = "collab_user_lname")
 	private String userLname;
-	
-	@Column(name = "collab_image_path")
-	private String userImagePath;
 
 	@JsonIgnoreProperties(value = "collaborators")
 	@ManyToMany(mappedBy = "collaborators", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

@@ -22,6 +22,7 @@ import java.util.Base64;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import org.apache.commons.io.FilenameUtils;
+import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -61,6 +62,9 @@ public class ImplUserService implements IUserService {
 
 	@Autowired
 	private RabbitTemplate rabbitTemplate;
+
+	@Autowired
+	private ModelMapper modelMapper;
 
 //	@Autowired
 //	private ServletContext context;
@@ -121,16 +125,17 @@ public class ImplUserService implements IUserService {
 
 		LOG.info(Constant.SERVICE_REGISTER_METHOD);
 		// System.out.println(userRepository.findByEmail(registerDTO.getEmail()));
-		if (userRepository.findByEmail(registerDTO.getEmail()).isPresent()) {
+		User user = userRepository.findByEmail(registerDTO.getEmail()).orElse(null);
+		if (user!=null) {
 			LOG.error(registerDTO.getEmail() + " " + Constant.REGISTER_EMAIL_FOUND);
 			throw new RegisterException(registerDTO.getEmail() + " " + Constant.REGISTER_EMAIL_FOUND);
 		}
 
 		registerDTO.setPassword(config.passwordEncoder().encode(registerDTO.getPassword()));
-		User user = config.modelMapper().map(registerDTO, User.class);
+		user = modelMapper.map(registerDTO, User.class);
 		String token = TokenUtility.buildToken(registerDTO.getEmail(), Constant.KEY_REGISTER_VERIFY);
-		// code for sending email in RABBITMQ queue
-
+//		// code for sending email in RABBITMQ queue
+//
 		RabbitMQBody rabbitMQBody = new RabbitMQBody();
 		rabbitMQBody.setEmail(registerDTO.getEmail());
 		rabbitMQBody.setSubject(Constant.EMAIL_SUBJECT_VERIFY);
@@ -258,7 +263,7 @@ public class ImplUserService implements IUserService {
 						}
 
 					} catch (Exception e) {
-						
+
 					}
 				}
 			}
@@ -348,6 +353,7 @@ public class ImplUserService implements IUserService {
 
 	}
 
+//	@Cacheable(value = "user2", key = "#id", unless="#result == null")
 	@Override
 	public User findUserById(int id) {
 		Optional<User> user = userRepository.findById(id);
