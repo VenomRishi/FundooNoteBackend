@@ -42,7 +42,7 @@ public interface INoteController {
 	 *         message on the client application
 	 */
 	ResponseEntity<Response> add(String userIdToken, NoteDTO addDTO);
-	
+
 	ResponseEntity<Response> getNoteProfile(String userIdToken, int noteId);
 
 	/**
@@ -303,7 +303,7 @@ public interface INoteController {
 	 *         message on the client application
 	 */
 	ResponseEntity<Response> addCollabToNote(String userIdToken, String collabEmail, int noteId);
-	
+
 	ResponseEntity<Response> getCollabProfile(String userIdToken, int noteId, int collabId);
 
 	/**
@@ -318,15 +318,7 @@ public interface INoteController {
 	 * @return this will returns ResponseEntity<Response> which will show a proper
 	 *         message on the client application
 	 */
-	ResponseEntity<Response> removeCollabToNote(String userIdToken, String collabEmail, int noteId);
-
-	/**
-	 * Purpose: this method uses the RestTemplate to get all the users record which
-	 * is running in different project
-	 * 
-	 * @return it returns all the users which is there in different project
-	 */
-	ResponseEntity<Response> getAllUsers();
+	ResponseEntity<Response> removeCollabToNote(String userIdToken, int noteId, String collabEmail);
 
 	/**
 	 * Purpose: this method is implemented to give proper response even if the Rest
@@ -364,11 +356,5 @@ public interface INoteController {
 	 *         message on the client application
 	 */
 	ResponseEntity<Response> findNoteByTitleOrDescription(String userIdToken, String key);
-
-	
-
-	
-
-	
 
 }

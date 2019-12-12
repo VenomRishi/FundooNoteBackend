@@ -74,7 +74,7 @@ public class Constant {
 	public static final String COLLABORATOR_ALREADY_PRESENT = "cannot add collaborator because already present";
 	public static final String COLLABORATOR_NOT_PRESENT = "cannot remove collaborator because not present";
 	public static final String COLLAB_NOT_PRESENT = "No collaborator found with this email";
-	public static final String COLLAB_NOT_PRESENT_WITH_ID = "No collaborator found with this email";
+	public static final String COLLAB_NOT_PRESENT_WITH_ID = "No collaborator found with this id";
 	public static final String USER_ID_NOT_FOUND = "No user present with this id";
 	public static final String COLLAB_EMAIL_NOT_PRESENT = "Cannot find email";
 	public static final String COLLAB_EMAIL_ALREADY_ADDED = "Collaborator already added";

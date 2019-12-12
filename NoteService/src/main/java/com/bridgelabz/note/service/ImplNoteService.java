@@ -17,7 +17,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -112,9 +111,8 @@ public class ImplNoteService implements INoteService {
 		headers.set("userEmailToken", TokenUtility.buildToken(user.getEmail()));
         HttpEntity<String> entity = new HttpEntity<String>(headers);
         ResponseEntity<Response> responseEntity = restTemplate.exchange("http://user-service/getprofile", HttpMethod.GET, entity, Response.class);
-		
-		System.out.println(responseEntity.getBody());
-		return null;
+	
+		return responseEntity.getBody();
 	}
 
 	@Override
@@ -465,7 +463,6 @@ public class ImplNoteService implements INoteService {
 
 	@Override
 	public Response getCollabProfile(String userIdToken, int noteId, int collabId) {
-		// TODO	
 		User user = findUserById(Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject()));
 		Note note = noteRepository.findById(noteId).orElse(null);
 		if(note==null) {
@@ -474,39 +471,17 @@ public class ImplNoteService implements INoteService {
 		if (user==null) {
 			throw new NoteException(Constant.USER_ID_NOT_FOUND);
 		}
-		
-		if(note.getCollaborators().stream().anyMatch(i->i.getCollabId()==collabId)) {
+		if(!note.getCollaborators().stream().anyMatch(i->i.getCollabId()==collabId)) {
 			throw new NoteException(Constant.COLLAB_NOT_PRESENT_WITH_ID);
 		}
 		Collaborator collab = note.getCollaborators().stream().filter(i->i.getCollabId()==collabId).findFirst().get();
-
-//		String images = "";
-//		String filePath = Constant.UPLOAD_FOLDER;
-//		File fileFolder = new File(filePath);
-//		if (fileFolder != null) {
-//			for (final File file : fileFolder.listFiles()) {
-//				if (!file.isDirectory()) {
-//					String encodeBase64 = null;
-//					try {
-//						if ((Constant.UPLOAD_FOLDER + file.getName()).equals(collab.getUserImagePath())) {
-//							String extension = FilenameUtils.getExtension(file.getName());
-//							FileInputStream fileInputStream = new FileInputStream(file);
-//							byte[] bytes = new byte[(int) file.length()];
-//							fileInputStream.read(bytes);
-//							encodeBase64 = Base64.getEncoder().encodeToString(bytes);
-//							images = ("data:image/" + extension + ";base64," + encodeBase64);
-//							fileInputStream.close();
-//							break;
-//						}
-//
-//					} catch (Exception e) {
-//						
-//					}
-//				}
-//			}
-//		}
-//		return new Response(200, Constant.GET_IMAGES_RESPONSE, images);
-		return null;
+		System.out.println(collab.getUserEmail());
+		HttpHeaders headers = new HttpHeaders();
+		headers.set("userEmailToken", TokenUtility.buildToken(collab.getUserEmail()));
+        HttpEntity<String> entity = new HttpEntity<String>(headers);
+        ResponseEntity<Response> responseEntity = restTemplate.exchange("http://user-service/getprofile", HttpMethod.GET, entity, Response.class);
+	
+		return responseEntity.getBody();
 	}
 
 	@Override
@@ -518,23 +493,10 @@ public class ImplNoteService implements INoteService {
 			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
 		Collaborator collab = collabRepository.findByUserEmail(collabEmail).orElse(null);
 		if (collab == null)
-			throw new NoteException(Constant.COLLABORATOR_NOT_PRESENT);
+			throw new NoteException(Constant.COLLAB_NOT_PRESENT_WITH_ID);
 
 		note.getCollaborators().remove(collab);
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_UPDATE, noteRepository.save(note));
-	}
-
-	@Override
-	public Response getAllUsers() {
-		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_USER_LIST, getUserList());
-	}
-
-	@SuppressWarnings("unchecked")
-	private List<User> getUserList() {
-		Response response = restTemplate.getForObject("http://user-service/getall", Response.class);
-		List<User> users = new ArrayList<User>();
-		users = (List<User>) response.getData();
-		return users;
 	}
 
 	@Override

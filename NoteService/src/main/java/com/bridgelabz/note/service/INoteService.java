@@ -332,16 +332,6 @@ public interface INoteService {
 	Response removeCollabToNote(String userIdToken, String collabEmail, int noteId);
 
 	/**
-	 * Purpose: this method uses the RestTemplate to get all users from the
-	 * different project which is running on different REST API(Representation state
-	 * transfer application programming interface) side
-	 * 
-	 * @return returns the list of users which are enrolled inside UserService
-	 *         module
-	 */
-	Response getAllUsers();
-
-	/**
 	 * Purpose: this method is implemented to give proper response even if the Rest
 	 * Template will unable to get response from user service this is fault tolerant
 	 * method for getAllUsers() where in this method it uses RestTemplate to get

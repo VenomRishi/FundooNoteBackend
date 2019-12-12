@@ -36,7 +36,7 @@ import com.bridgelabz.note.dto.NoteChangesDTO;
 import com.bridgelabz.note.response.Response;
 import com.bridgelabz.note.service.INoteService;
 import com.bridgelabz.note.utility.Constant;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+//import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
 @RequestMapping
@@ -212,28 +212,22 @@ public class NoteController implements INoteController {
 		LOG.info(Constant.CONTROLLER_ADD_COLLAB_TO_NOTE);
 		return new ResponseEntity<Response>(service.addCollabToNote(userIdToken, collabEmail, noteId), HttpStatus.OK);
 	}
-	
+
+//	@HystrixCommand(fallbackMethod = "fallback")
 	@Override
 	@GetMapping("/getcollabprofile")
-	public ResponseEntity<Response> getCollabProfile(@RequestHeader(name="userIdToken")String userIdToken, @RequestParam(name = "noteId") int noteId, @RequestParam(name = "collabId") int collabId){
+	public ResponseEntity<Response> getCollabProfile(@RequestHeader(name = "userIdToken") String userIdToken,
+			@RequestParam(name = "noteId") int noteId, @RequestParam(name = "collabId") int collabId) {
 		return new ResponseEntity<Response>(service.getCollabProfile(userIdToken, noteId, collabId), HttpStatus.OK);
 	}
 
 	@Override
 	@PutMapping("/removecollabfromnote")
 	public ResponseEntity<Response> removeCollabToNote(@RequestHeader(name = "userIdToken") String userIdToken,
-			@RequestParam(name = "collabEmail") String collabEmail, @RequestParam(name = "noteId") int noteId) {
+			@RequestParam(name = "noteId") int noteId, @RequestParam(name = "collabEmail") String collabEmail) {
 		LOG.info(Constant.CONTROLLER_REMOVE_COLLAB_FROM_NOTE);
 		return new ResponseEntity<Response>(service.removeCollabToNote(userIdToken, collabEmail, noteId),
 				HttpStatus.OK);
-	}
-
-	@HystrixCommand(fallbackMethod = "fallback")
-	@Override
-	@GetMapping("/getallusers")
-	public ResponseEntity<Response> getAllUsers() {
-		LOG.info(Constant.CONTROLLER_GET_ALL_USERS);
-		return new ResponseEntity<Response>(service.getAllUsers(), HttpStatus.OK);
 	}
 
 	public ResponseEntity<Response> fallback() {
