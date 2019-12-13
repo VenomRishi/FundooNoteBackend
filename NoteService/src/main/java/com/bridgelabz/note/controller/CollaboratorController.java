@@ -52,6 +52,12 @@ public class CollaboratorController implements ICollaboratorController {
 	public ResponseEntity<Response> getCollaborator(@RequestHeader(name="userIdToken") String userIdToken, @RequestParam(name = "collabEmail") String collabEmail) {
 		return new ResponseEntity<Response>(service.getCollaborator(userIdToken, collabEmail), HttpStatus.OK);
 	}
+	
+	@Override
+	@GetMapping("/getprofile")
+	public ResponseEntity<Response> getCollabProfile(@RequestHeader(name ="userIdToken") String userIdToken, @RequestParam(name="collabEmail")String collabEmail) {
+		return new ResponseEntity<Response>(service.getCollabProfile(userIdToken, collabEmail), HttpStatus.OK);
+	}
 
 	@Override
 	@DeleteMapping("/remove")

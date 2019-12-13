@@ -15,6 +15,10 @@ package com.bridgelabz.note.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -24,6 +28,7 @@ import com.bridgelabz.note.exception.custom.CollaboratorException;
 import com.bridgelabz.note.repository.ICollaboratorRepository;
 import com.bridgelabz.note.response.Response;
 import com.bridgelabz.note.utility.Constant;
+import com.bridgelabz.note.utility.TokenUtility;
 
 @Service
 public class ImplCollaboratorService implements ICollaboratorService {
@@ -32,10 +37,9 @@ public class ImplCollaboratorService implements ICollaboratorService {
 
 	@Autowired
 	private ICollaboratorRepository collabRepository;
-	
+
 	@Autowired
 	private RestTemplate restTemplate;
-	
 
 	@Override
 	public Response addCollaborator(String email) {
@@ -49,15 +53,15 @@ public class ImplCollaboratorService implements ICollaboratorService {
 
 		return new Response(Constant.HTTP_STATUS_OK, Constant.COLLAB_SAVE, collabRepository.save(collabAdd));
 	}
-	
+
 	@Override
 	public Response getCollaborator(String userIdToken, String collabEmail) {
 		User user = findUserById(userIdToken);
-		if(user == null) {
+		if (user == null) {
 			throw new CollaboratorException(Constant.USER_EMAIL_NOT_FOUND);
 		}
 		Collaborator collab = collabRepository.findByUserEmail(collabEmail).orElse(null);
-		if(collab == null) {
+		if (collab == null) {
 			throw new CollaboratorException(Constant.COLLAB_NOT_PRESENT);
 		}
 		return new Response(Constant.HTTP_STATUS_OK, Constant.COLLAB_GET, collab);
@@ -75,10 +79,24 @@ public class ImplCollaboratorService implements ICollaboratorService {
 
 	@Override
 	public User findUserById(String userIdToken) {
-		User user = restTemplate.getForObject(
-				"http://user-service/finduserbyid?userIdToken=" + userIdToken,
+		User user = restTemplate.getForObject("http://user-service/finduserbyid?userIdToken=" + userIdToken,
 				User.class);
 		return user;
+	}
+
+	@Override
+	public Response getCollabProfile(String userIdToken, String collabEmail) {
+		User user = findUserById(userIdToken);
+		
+		if (user == null) {
+			throw new CollaboratorException(Constant.USER_EMAIL_NOT_FOUND);
+		}
+		HttpHeaders headers = new HttpHeaders();
+		headers.set("userEmailToken", TokenUtility.buildToken(collabEmail));
+		HttpEntity<String> entity = new HttpEntity<String>(headers);
+		ResponseEntity<Response> responseEntity = restTemplate.exchange("http://user-service/getprofile",
+				HttpMethod.GET, entity, Response.class);
+		return responseEntity.getBody();
 	}
 
 }

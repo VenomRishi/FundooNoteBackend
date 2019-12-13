@@ -40,4 +40,6 @@ public interface ICollaboratorController {
 	ResponseEntity<Response> removeCollaborator(String email);
 
 	ResponseEntity<Response> getCollaborator(String userIdToken, String collabEmail);
+
+	ResponseEntity<Response> getCollabProfile(String userIdToken, String collabEmail);
 }

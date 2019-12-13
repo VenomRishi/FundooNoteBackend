@@ -46,5 +46,7 @@ public interface ICollaboratorService {
 
 	User findUserById(String userIdToken);
 
+	Response getCollabProfile(String userIdToken, String collabEmail);
+
 	
 }
