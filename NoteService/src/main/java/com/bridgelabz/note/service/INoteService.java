@@ -370,6 +370,8 @@ public interface INoteService {
 
 	User findUserById(int id);
 
+	Response getByFilterPin(String userId);
+
 		
 
 }

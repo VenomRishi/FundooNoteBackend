@@ -25,7 +25,6 @@ import lombok.Setter;
 @Setter
 public class NoteDTO {
 
-	
 	private String title;
 	private String description;
 	private Date reminder;
@@ -33,6 +32,6 @@ public class NoteDTO {
 	private boolean isPin;
 	private boolean isArchive;
 	private List<Label> labels;
-	private List<Collaborator> collabs;
+	private List<Collaborator> collaborators;
 
 }

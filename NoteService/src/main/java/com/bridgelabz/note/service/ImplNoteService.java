@@ -152,7 +152,7 @@ public class ImplNoteService implements INoteService {
 
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_DETAIL,
 				noteRepository.findAll().stream()
-						.filter(i -> i.getUserId() == key && i.isPin() == pin && i.isArchive() == archive
+						.filter(i -> i.getUserId() == key && i.isArchive() == archive
 								&& i.isTrash() == trash)
 						.sorted(Comparator.comparing(Note::getCreatedDate).reversed()).parallel()
 						.collect(Collectors.toList()));
@@ -531,6 +531,17 @@ public class ImplNoteService implements INoteService {
 		} catch (IOException e) {
 			throw new NoteException(e.toString());
 		}
+	}
+
+	@Override
+	public Response getByFilterPin(String userId) {
+		int key = Integer.parseInt(TokenUtility.parseToken(userId).getSubject());
+
+		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_DETAIL,
+				noteRepository.findAll().stream()
+						.filter(i -> i.getUserId() == key && i.isPin() == true)
+						.sorted(Comparator.comparing(Note::getCreatedDate).reversed()).parallel()
+						.collect(Collectors.toList()));
 	}
 
 }

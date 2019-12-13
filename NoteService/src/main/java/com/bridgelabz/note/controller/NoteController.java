@@ -92,6 +92,12 @@ public class NoteController implements INoteController {
 		LOG.info(Constant.CONTROLLER_GET_BY_FILTER);
 		return new ResponseEntity<Response>(service.getByFilter(userId, pin, archive, trash), HttpStatus.OK);
 	}
+	
+	@Override
+	@GetMapping("/getbyfilterpin")
+	public ResponseEntity<Response> getByFilterPin(@RequestHeader(name = "userId") String userId) {
+		return new ResponseEntity<Response>(service.getByFilterPin(userId), HttpStatus.OK);
+	}
 
 	@Override
 	@PutMapping("/update")

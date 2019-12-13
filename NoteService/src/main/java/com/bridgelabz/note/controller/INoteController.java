@@ -357,4 +357,6 @@ public interface INoteController {
 	 */
 	ResponseEntity<Response> findNoteByTitleOrDescription(String userIdToken, String key);
 
+	ResponseEntity<Response> getByFilterPin(String userId);
+
 }
