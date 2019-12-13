@@ -38,4 +38,6 @@ public interface ICollaboratorController {
 	 * @return returns proper response entity of showing proper response to the user
 	 */
 	ResponseEntity<Response> removeCollaborator(String email);
+
+	ResponseEntity<Response> getCollaborator(String userIdToken, String collabEmail);
 }

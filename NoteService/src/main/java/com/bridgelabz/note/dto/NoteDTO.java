@@ -15,6 +15,7 @@ package com.bridgelabz.note.dto;
 import java.util.Date;
 import java.util.List;
 
+import com.bridgelabz.note.entity.Collaborator;
 import com.bridgelabz.note.entity.Label;
 
 import lombok.Getter;
@@ -32,5 +33,6 @@ public class NoteDTO {
 	private boolean isPin;
 	private boolean isArchive;
 	private List<Label> labels;
+	private List<Collaborator> collabs;
 
 }

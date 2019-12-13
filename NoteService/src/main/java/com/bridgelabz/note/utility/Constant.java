@@ -76,6 +76,7 @@ public class Constant {
 	public static final String COLLAB_NOT_PRESENT = "No collaborator found with this email";
 	public static final String COLLAB_NOT_PRESENT_WITH_ID = "No collaborator found with this id";
 	public static final String USER_ID_NOT_FOUND = "No user present with this id";
+	public static final String USER_EMAIL_NOT_FOUND = "No user present with this email";
 	public static final String COLLAB_EMAIL_NOT_PRESENT = "Cannot find email";
 	public static final String COLLAB_EMAIL_ALREADY_ADDED = "Collaborator already added";
 
@@ -110,6 +111,7 @@ public class Constant {
 
 	// collab related
 	public final static String COLLAB_SAVE = "Collaborator stored successfully";
+	public final static String COLLAB_GET = "Collaborator detail";
 	public final static String COLLAB_DELETE = "Collaborator remove successfully";
 
 	// token related

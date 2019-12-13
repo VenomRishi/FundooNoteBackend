@@ -12,6 +12,7 @@
 
 package com.bridgelabz.note.service;
 
+import com.bridgelabz.note.entity.User;
 import com.bridgelabz.note.response.Response;
 
 public interface ICollaboratorService {
@@ -28,6 +29,8 @@ public interface ICollaboratorService {
 	 */
 	Response addCollaborator(String email);
 
+	Response getCollaborator(String userIdToken, String collabEmail);
+	
 	/**
 	 * Purpose: this method is used to remove the collaborator as this is service
 	 * related part so all the database querying is contains in the service part
@@ -40,4 +43,8 @@ public interface ICollaboratorService {
 	 *         which contains status code, message and data if any
 	 */
 	Response removeCollaborator(String email);
+
+	User findUserById(String userIdToken);
+
+	
 }
