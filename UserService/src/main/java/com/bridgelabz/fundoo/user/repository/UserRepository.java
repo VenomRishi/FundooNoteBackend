@@ -20,5 +20,12 @@ import com.bridgelabz.fundoo.user.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
+
+	/**
+	 * Purpose: this method will find user by email from the JPA Repository
+	 * 
+	 * @param email this will specify from which email program has to find entity
+	 * @return return Optional<User>
+	 */
 	Optional<User> findByEmail(String email);
 }

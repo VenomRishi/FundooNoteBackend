@@ -39,7 +39,26 @@ public interface ICollaboratorController {
 	 */
 	ResponseEntity<Response> removeCollaborator(String email);
 
+	/**
+	 * Purpose: this API(application programming interface) which helps to find the
+	 * collaborator with using email
+	 * 
+	 * @param userIdToken this token has user id which after parsing helps program
+	 *                    to validate the request is coming from proper user
+	 * @param collabEmail this can specify which collaborator to find from list of
+	 *                    collaborator of note
+	 * @return returns collaborator entity
+	 */
 	ResponseEntity<Response> getCollaborator(String userIdToken, String collabEmail);
 
+	/**
+	 * Purpose: this method is used to getting profile for particular collaborator
+	 * 
+	 * @param userIdToken this token has user id which after parsing helps program
+	 *                    to validate the request is coming from proper user
+	 * @param collabEmail this collaborator email will specify of which profile
+	 *                    picture we have to fetch from user service
+	 * @return returns fetch profile picture with the proper response
+	 */
 	ResponseEntity<Response> getCollabProfile(String userIdToken, String collabEmail);
 }

@@ -12,7 +12,6 @@
 
 package com.bridgelabz.note.service;
 
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -97,21 +96,22 @@ public class ImplNoteService implements INoteService {
 
 	@Override
 	public Response getNoteProfile(String userIdToken, int noteId) {
-		
+
 		User user = findUserById(Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject()));
 		Note note = noteRepository.findById(noteId).orElse(null);
-		if(note==null) {
+		if (note == null) {
 			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
 		}
-		if (user==null) {
+		if (user == null) {
 			throw new NoteException(Constant.USER_ID_NOT_FOUND);
 		}
-		
+
 		HttpHeaders headers = new HttpHeaders();
 		headers.set("userEmailToken", TokenUtility.buildToken(user.getEmail()));
-        HttpEntity<String> entity = new HttpEntity<String>(headers);
-        ResponseEntity<Response> responseEntity = restTemplate.exchange("http://user-service/getprofile", HttpMethod.GET, entity, Response.class);
-	
+		HttpEntity<String> entity = new HttpEntity<String>(headers);
+		ResponseEntity<Response> responseEntity = restTemplate.exchange("http://user-service/getprofile",
+				HttpMethod.GET, entity, Response.class);
+
 		return responseEntity.getBody();
 	}
 
@@ -150,12 +150,11 @@ public class ImplNoteService implements INoteService {
 		LOG.info(Constant.SERVICE_GET_BY_FILTER);
 		int key = Integer.parseInt(TokenUtility.parseToken(userId).getSubject());
 
-		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_DETAIL,
-				noteRepository.findAll().stream()
-						.filter(i -> i.getUserId() == key && i.isArchive() == archive
-								&& i.isTrash() == trash)
-						.sorted(Comparator.comparing(Note::getCreatedDate).reversed()).parallel()
-						.collect(Collectors.toList()));
+		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_DETAIL, noteRepository.findAll().stream()
+				.filter(i -> (i.getUserId() == key
+						|| i.getCollaborators().stream().allMatch(j -> j.getUserEmail().equals(i.getUserEmail())))
+								&& i.isArchive() == archive && i.isTrash() == trash)
+				.sorted(Comparator.comparing(Note::getCreatedDate).reversed()).parallel().collect(Collectors.toList()));
 	}
 
 	@Override
@@ -465,22 +464,24 @@ public class ImplNoteService implements INoteService {
 	public Response getCollabProfile(String userIdToken, int noteId, int collabId) {
 		User user = findUserById(Integer.parseInt(TokenUtility.parseToken(userIdToken).getSubject()));
 		Note note = noteRepository.findById(noteId).orElse(null);
-		if(note==null) {
+		if (note == null) {
 			throw new NoteException(Constant.NOTE_ID_NOT_FOUND);
 		}
-		if (user==null) {
+		if (user == null) {
 			throw new NoteException(Constant.USER_ID_NOT_FOUND);
 		}
-		if(!note.getCollaborators().stream().anyMatch(i->i.getCollabId()==collabId)) {
+		if (!note.getCollaborators().stream().anyMatch(i -> i.getCollabId() == collabId)) {
 			throw new NoteException(Constant.COLLAB_NOT_PRESENT_WITH_ID);
 		}
-		Collaborator collab = note.getCollaborators().stream().filter(i->i.getCollabId()==collabId).findFirst().get();
+		Collaborator collab = note.getCollaborators().stream().filter(i -> i.getCollabId() == collabId).findFirst()
+				.get();
 		System.out.println(collab.getUserEmail());
 		HttpHeaders headers = new HttpHeaders();
 		headers.set("userEmailToken", TokenUtility.buildToken(collab.getUserEmail()));
-        HttpEntity<String> entity = new HttpEntity<String>(headers);
-        ResponseEntity<Response> responseEntity = restTemplate.exchange("http://user-service/getprofile", HttpMethod.GET, entity, Response.class);
-	
+		HttpEntity<String> entity = new HttpEntity<String>(headers);
+		ResponseEntity<Response> responseEntity = restTemplate.exchange("http://user-service/getprofile",
+				HttpMethod.GET, entity, Response.class);
+
 		return responseEntity.getBody();
 	}
 
@@ -538,8 +539,7 @@ public class ImplNoteService implements INoteService {
 		int key = Integer.parseInt(TokenUtility.parseToken(userId).getSubject());
 
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_DETAIL,
-				noteRepository.findAll().stream()
-						.filter(i -> i.getUserId() == key && i.isPin() == true)
+				noteRepository.findAll().stream().filter(i -> i.getUserId() == key && i.isPin() == true)
 						.sorted(Comparator.comparing(Note::getCreatedDate).reversed()).parallel()
 						.collect(Collectors.toList()));
 	}

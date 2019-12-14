@@ -20,5 +20,12 @@ import com.bridgelabz.note.entity.Note;
 
 @Repository
 public interface INoteRepository extends JpaRepository<Note, Integer> {
+	/**
+	 * Purpose: this method is used to find note by using note id and user id
+	 * 
+	 * @param noteId this parameter helps to find note
+	 * @param userId this parameter helps to find note associated with which user
+	 * @return returns the Optional<Note>
+	 */
 	Optional<Note> findByNoteIdAndUserId(Integer noteId, int userId);
 }

@@ -20,5 +20,12 @@ import com.bridgelabz.note.entity.Collaborator;
 
 @Repository
 public interface ICollaboratorRepository extends JpaRepository<Collaborator, Integer> {
+	/**
+	 * Purpose: this method is used to find user by using user email
+	 * 
+	 * @param userEmail this parameter helps to specify the collaborator by using
+	 *                  email
+	 * @return returns the Optional<Collaborator>
+	 */
 	Optional<Collaborator> findByUserEmail(String userEmail);
 }

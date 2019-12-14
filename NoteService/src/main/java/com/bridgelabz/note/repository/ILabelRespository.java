@@ -20,5 +20,12 @@ import com.bridgelabz.note.entity.Label;
 
 @Repository
 public interface ILabelRespository extends JpaRepository<Label, Integer> {
+	/**
+	 * Purpose: this method is used to find label by using label id and user id
+	 * 
+	 * @param userId this parameter helps to find label
+	 * @param labelId this parameter helps to find label associated with which user
+	 * @return returns the Optional<Label>
+	 */
 	Optional<Label> findByUserIdAndLabelId(int userId, int labelId);
 }

@@ -42,7 +42,17 @@ public interface INoteService {
 	 *         side
 	 */
 	Response add(String userIdToken, NoteDTO addDTO);
-	
+
+	/**
+	 * Purpose: this method is used to getting base 64 encoded profile picture from
+	 * user service this method makes RestTemplate call to user service to getting
+	 * profile picture of particular user
+	 * 
+	 * @param userIdToken this id used to uniquely identify the user
+	 * @param noteId      this parameter will specify from which note has the email
+	 *                    to find the profile picture
+	 * @return returns the proper response with the profile picture
+	 */
 	Response getNoteProfile(String userIdToken, int noteId);
 
 	/**
@@ -78,9 +88,9 @@ public interface INoteService {
 	 */
 	Response getByDate(String userId);
 
-	/**key
-	 * Purpose: this method is used to update the note record which will going to
-	 * come from the user end in service method are going to update into database
+	/**
+	 * key Purpose: this method is used to update the note record which will going
+	 * to come from the user end in service method are going to update into database
 	 * 
 	 * @param userIdToken this is token by which we can specify which user has the
 	 *                    note related with
@@ -93,11 +103,6 @@ public interface INoteService {
 	 *         update into database and this will return the object and by the use
 	 *         of response class we are generating a proper response to show at
 	 *         client side
-	 */
-	/**
-	 * @param userIdToken
-	 * @param updateDTO
-	 * @return
 	 */
 	Response update(String userIdToken, NoteChangesDTO updateDTO);
 
@@ -186,8 +191,8 @@ public interface INoteService {
 	 * @param labelToNoteDTO this is labelToNoteDTO which has the note id and the
 	 *                       list of labels which can be then stored inside the
 	 *                       database of existing note
-	 * @return this method returnfallbacks a proper response message with true value which
-	 *         will pass to client side
+	 * @return this method returnfallbacks a proper response message with true value
+	 *         which will pass to client side
 	 */
 	Response addLabelToNote(String userIdToken, LabelToNoteDTO labelToNoteDTO);
 
@@ -314,7 +319,16 @@ public interface INoteService {
 	 *         find the media files
 	 */
 	Response addCollabToNote(String userIdToken, String collabEmail, int noteId);
-	
+
+	/**
+	 * Purpose: this method is used to getting base 64 encoded profile picture from
+	 * the user service by using RestTemplate call to user service
+	 * 
+	 * @param userIdToken helps to validate user
+	 * @param noteId      helps to validate note
+	 * @param collabId    helps to validate collaborator
+	 * @return returns proper response with the base 64 encoded profile picture
+	 */
 	Response getCollabProfile(String userIdToken, int noteId, int collabId);
 
 	/**
@@ -366,12 +380,32 @@ public interface INoteService {
 	 */
 	Response findNoteByTitleOrDescription(String userId, String key);
 
+	/**
+	 * Purpose: this method makes RestTemplate call to user service to getting the
+	 * user model from user service by using email
+	 * 
+	 * @param email this parameter helps to find the user by using email
+	 * @return returns the user object if find else return null in user object
+	 */
 	User findUserByEmail(String email);
 
+	/**
+	 * Purpose: this method makes RestTemplate call to user service to getting the
+	 * user model from user service by using user id
+	 * 
+	 * @param id this parameter helps to find user by user id
+	 * @return returns the user object if find else return null in user object
+	 */
 	User findUserById(int id);
 
+	/**
+	 * Purpose: this method will get notes which is there in database on the pin
+	 * filter
+	 * 
+	 * @param userId this parameter helps to validate the request is coming from
+	 *               proper user
+	 * @return returns proper response along with list of notes in it
+	 */
 	Response getByFilterPin(String userId);
-
-		
 
 }

@@ -126,7 +126,7 @@ public class ImplUserService implements IUserService {
 		LOG.info(Constant.SERVICE_REGISTER_METHOD);
 		// System.out.println(userRepository.findByEmail(registerDTO.getEmail()));
 		User user = userRepository.findByEmail(registerDTO.getEmail()).orElse(null);
-		if (user!=null) {
+		if (user != null) {
 			LOG.error(registerDTO.getEmail() + " " + Constant.REGISTER_EMAIL_FOUND);
 			throw new RegisterException(registerDTO.getEmail() + " " + Constant.REGISTER_EMAIL_FOUND);
 		}
@@ -329,12 +329,24 @@ public class ImplUserService implements IUserService {
 		return userRepository.save(user);
 	}
 
+	/**
+	 * Purpose: this method is used to return all users which there in database
+	 * 
+	 * @return returns all the list of user from database
+	 */
 	@Override
 	public Response getAllUsers() {
 		return new Response(200, Constant.UPLOAD_SUCCESS,
 				userRepository.findAll().stream().collect(Collectors.toList()));
 	}
 
+	/**
+	 * Purpose: this method is used to find user by email id and also put return
+	 * value into cache
+	 * 
+	 * @param userId this will uniquely specify which user to find
+	 * @return returns a specific user entity
+	 */
 	@Cacheable(value = "user", key = "#userId")
 	@Override
 	public User getUser(String userId) {
@@ -342,6 +354,12 @@ public class ImplUserService implements IUserService {
 		return userRepository.findByEmail(userId).get();
 	}
 
+	/**
+	 * Purpose: this method is used to find user by email id
+	 * 
+	 * @param userId this will uniquely specify which user to find
+	 * @return returns a specific user entity
+	 */
 	@Override
 	public User findUser(String email) {
 		Optional<User> user = userRepository.findByEmail(email);
@@ -353,6 +371,13 @@ public class ImplUserService implements IUserService {
 
 	}
 
+	/**
+	 * Purpose: this method is used to find user by user id and also put return
+	 * value into cache
+	 * 
+	 * @param userId this will uniquely specify which user to find
+	 * @return returns a specific user entity
+	 */
 //	@Cacheable(value = "user2", key = "#id", unless="#result == null")
 	@Override
 	public User findUserById(int id) {

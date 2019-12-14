@@ -29,8 +29,17 @@ public interface ICollaboratorService {
 	 */
 	Response addCollaborator(String email);
 
+	/**
+	 * Purpose: this method is used to getting the record of particular collaborator
+	 * by using collaborator email
+	 * 
+	 * @param userIdToken this token helps to validating the user id
+	 * @param collabEmail this parameter is used to getting particular collaborator
+	 *                    by using email
+	 * @return returns the collaborator
+	 */
 	Response getCollaborator(String userIdToken, String collabEmail);
-	
+
 	/**
 	 * Purpose: this method is used to remove the collaborator as this is service
 	 * related part so all the database querying is contains in the service part
@@ -44,9 +53,23 @@ public interface ICollaboratorService {
 	 */
 	Response removeCollaborator(String email);
 
+	/**
+	 * Purpose: this method makes the RestTemplate call to user service to finding
+	 * user exist in the user service or not
+	 * 
+	 * @param userIdToken this token helps to validating the user id
+	 * @return returns the user if exists in user service or else return null
+	 */
 	User findUserById(String userIdToken);
 
+	/**
+	 * Purpose: this method is used to get base 64 image path from the user service
+	 * 
+	 * @param userIdToken this token helps to validating the user id
+	 * @param collabEmail his parameter is used to getting particular collaborator
+	 *                    profile by using email
+	 * @return returns the base 64 encoded profile picture path
+	 */
 	Response getCollabProfile(String userIdToken, String collabEmail);
 
-	
 }

@@ -20,7 +20,6 @@ import com.bridgelabz.fundoo.user.dto.SetPasswordDTO;
 import com.bridgelabz.fundoo.user.entity.User;
 import com.bridgelabz.fundoo.user.response.Response;
 
-
 public interface IUserService {
 	/**
 	 * Purpose: method for login the user into the system
@@ -121,6 +120,11 @@ public interface IUserService {
 	 */
 	User deleteProfile(String email) throws IOException;
 
+	/**
+	 * Purpose: this method is used to return all users which there in database
+	 * 
+	 * @return returns all the list of user from database
+	 */
 	Response getAllUsers();
 
 	/**
@@ -133,10 +137,21 @@ public interface IUserService {
 	 */
 	User getUser(String userId);
 
+	/**
+	 * Purpose: this method is used to find user by email id
+	 * 
+	 * @param userId this will uniquely specify which user to find
+	 * @return returns a specific user entity
+	 */
 	User findUser(String email);
 
+	/**
+	 * Purpose: this method is used to find user by user id and also put return
+	 * value into cache
+	 * 
+	 * @param userId this will uniquely specify which user to find
+	 * @return returns a specific user entity
+	 */
 	User findUserById(int id);
-
-	
 
 }

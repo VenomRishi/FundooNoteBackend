@@ -43,6 +43,18 @@ public interface INoteController {
 	 */
 	ResponseEntity<Response> add(String userIdToken, NoteDTO addDTO);
 
+	/**
+	 * Purpose: this method is used to serve the API(application programming
+	 * interface) request coming from the user and in this method, method getting
+	 * profile from user service by using RestTemplate
+	 * 
+	 * @param userIdToken this is token by which we can specify which user has the
+	 *                    note related with
+	 * @param noteId      this will specify for which note method should get profile
+	 *                    in note it maintaining user
+	 * @return this will returns ResponseEntity<Response> which will show a proper
+	 *         message on the client application
+	 */
 	ResponseEntity<Response> getNoteProfile(String userIdToken, int noteId);
 
 	/**
@@ -270,7 +282,8 @@ public interface INoteController {
 	 *                    changes
 	 * @param color       this parameter has the colour which helps to add or update
 	 *                    the colour of note
-	 * @return this will returns ResponseEntity<Response> which will show a proper
+	 * @return thisthis will returns ResponseEntity<Response> which will show a proper
+	 *         message on the client application will returns ResponseEntity<Response> which will show a proper
 	 *         message on the client application
 	 */
 	ResponseEntity<Response> updateColor(String userIdToken, int noteId, String color);
@@ -304,6 +317,19 @@ public interface INoteController {
 	 */
 	ResponseEntity<Response> addCollabToNote(String userIdToken, String collabEmail, int noteId);
 
+	/**
+	 * Purpose: this method is used to serve the API(application programming
+	 * interface) request coming from the user and in this method, method getting
+	 * profile from user service by using RestTemplate
+	 * 
+	 * @param userIdToken this is token by which we can specify which user has the
+	 *             this will returns ResponseEntity<Response> which will show a proper
+	 *         message on the client application       note related with
+	 * @param noteId      this can specify the note details
+	 * @param collabId    this can specify the collaborator details
+	 * @return this will returns ResponseEntity<Response> which will show a proper
+	 *         message on the client application
+	 */
 	ResponseEntity<Response> getCollabProfile(String userIdToken, int noteId, int collabId);
 
 	/**
@@ -357,6 +383,14 @@ public interface INoteController {
 	 */
 	ResponseEntity<Response> findNoteByTitleOrDescription(String userIdToken, String key);
 
+	/**
+	 * Purpose: this method is used to getting records by filtering notes by the
+	 * pinned note
+	 * 
+	 * @param userId this can specify for which user notes to fetch
+	 * @return this will returns ResponseEntity<Response> which will show a proper
+	 *         message on the client application
+	 */
 	ResponseEntity<Response> getByFilterPin(String userId);
 
 }

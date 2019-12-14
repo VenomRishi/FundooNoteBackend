@@ -240,11 +240,27 @@ public class UserController {
 				HttpStatus.OK);
 	}
 
+	/**
+	 * Purpose: this API(application programming interface) is created for getting a
+	 * particular user by using email id
+	 * 
+	 * @param userId this parameter will uniquely specify the user
+	 * @return ResponseEntity which is holding the String and HttpStatus in that
+	 *         entity
+	 */
 	@GetMapping("/finduser")
 	public User findUserByEmail(@RequestParam(name = "userEmailToken") String userId) {
 		return service.findUser(TokenUtility.parseToken(userId, Constant.KEY_LOGIN).getSubject());
 	}
 
+	/**
+	 * Purpose: this API(application programming interface) is created for getting a
+	 * particular user by using user id
+	 * 
+	 * @param userId this parameter will uniquely specify the user
+	 * @return ResponseEntity which is holding the String and HttpStatus in that
+	 *         entity
+	 */
 	@GetMapping("/finduserbyid")
 	public User findUserById(@RequestParam(name = "userIdToken") String userId) {
 		return service.findUserById(Integer.parseInt(TokenUtility.parseToken(userId, Constant.KEY_LOGIN).getSubject()));
