@@ -52,6 +52,10 @@ public class Collaborator implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	@UpdateTimestamp
 	private Date updatedDate;
+	
+	@Column(name = "collab_user_id")
+	@NotNull
+	private int userId;
 
 	@NotNull
 	@Column(name = "collab_user_email")

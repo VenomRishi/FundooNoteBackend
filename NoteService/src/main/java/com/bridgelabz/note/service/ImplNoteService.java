@@ -107,7 +107,7 @@ public class ImplNoteService implements INoteService {
 		}
 
 		HttpHeaders headers = new HttpHeaders();
-		headers.set("userEmailToken", TokenUtility.buildToken(user.getEmail()));
+		headers.set("userEmailToken", TokenUtility.buildToken(note.getUserEmail()));
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
 		ResponseEntity<Response> responseEntity = restTemplate.exchange("http://user-service/getprofile",
 				HttpMethod.GET, entity, Response.class);
@@ -152,7 +152,7 @@ public class ImplNoteService implements INoteService {
 
 		return new Response(Constant.HTTP_STATUS_OK, Constant.NOTE_DETAIL, noteRepository.findAll().stream()
 				.filter(i -> (i.getUserId() == key
-						|| i.getCollaborators().stream().allMatch(j -> j.getUserEmail().equals(i.getUserEmail())))
+						|| i.getCollaborators().stream().anyMatch(j -> j.getUserId()==key))
 								&& i.isArchive() == archive && i.isTrash() == trash)
 				.sorted(Comparator.comparing(Note::getCreatedDate).reversed()).parallel().collect(Collectors.toList()));
 	}
@@ -448,6 +448,7 @@ public class ImplNoteService implements INoteService {
 
 		if (collab == null) {
 			Collaborator collab2 = new Collaborator();
+			collab2.setUserId(user.getUid());
 			collab2.setUserEmail(collabEmail);
 			collab2.setUserFname(user.getFname());
 			collab2.setUserLname(user.getLname());
