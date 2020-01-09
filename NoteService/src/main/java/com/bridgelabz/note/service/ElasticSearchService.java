@@ -164,7 +164,7 @@ public class ElasticSearchService {
 		SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
 
 		searchSourceBuilder.query(QueryBuilders.boolQuery()
-				.should(QueryBuilders.queryStringQuery("*"+key+"*").lenient(true).field("title").field("description")));
+				.should(QueryBuilders.queryStringQuery("*" + key + "*").lenient(true).field("title").field("description")));
 		searchRequest.source(searchSourceBuilder);
 
 		SearchResponse searchResponse = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
